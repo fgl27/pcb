@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# TC4420CPA-TC4420CPA-buck-rescue-buck_gnd-rescue-buck_vcc_sync-rescue
+# TC4420CPA-TC4420CPA-buck-rescue-buck_gnd-rescue-buck_vcc_sync-rescue-oscila_mag-rescue
 #
-DEF TC4420CPA-TC4420CPA-buck-rescue-buck_gnd-rescue-buck_vcc_sync-rescue U 0 40 Y Y 1 L N
+DEF TC4420CPA-TC4420CPA-buck-rescue-buck_gnd-rescue-buck_vcc_sync-rescue-oscila_mag-rescue U 0 40 Y Y 1 L N
 F0 "U" -177 359 50 H V L BNN
-F1 "TC4420CPA-TC4420CPA-buck-rescue-buck_gnd-rescue-buck_vcc_sync-rescue" -214 -615 50 H V L BNN
+F1 "TC4420CPA-TC4420CPA-buck-rescue-buck_gnd-rescue-buck_vcc_sync-rescue-oscila_mag-rescue" -214 -615 50 H V L BNN
 F2 "DIP254P762X533-8" 0 0 50 H I L BNN
 F3 "TC4420CPA" 0 0 50 H I L BNN
 F4 "DIP-8 Microchip" 0 0 50 H I L BNN
