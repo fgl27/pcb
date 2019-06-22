@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name buck-rescue)(type Legacy)(uri ${KIPRJMOD}/buck-rescue.lib)(options "")(descr ""))
+  (lib (name buck_gnd-rescue)(type Legacy)(uri ${KIPRJMOD}/buck_gnd-rescue.lib)(options "")(descr ""))
+  (lib (name 1mhz-rescue)(type Legacy)(uri ${KIPRJMOD}/1mhz-rescue.lib)(options "")(descr ""))
+)

@@ -1,0 +1,310 @@
+EESchema Schematic File Version 4
+LIBS:1mhz-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:INDUCTOR L1
+U 1 1 5C4A86F4
+P 6250 1750
+F 0 "L1" V 6200 1900 50  0000 C CNN
+F 1 "33uH" V 6300 1900 50  0000 C CNN
+F 2 "Inductor_THT:L_Toroid_Vertical_L19.1mm_W8.1mm_P7.10mm_Bourns_5700" H 6250 1750 50  0001 C CNN
+F 3 "~" H 6250 1750 50  0001 C CNN
+	1    6250 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5C503296
+P 4300 1800
+F 0 "#PWR0111" H 4300 1550 50  0001 C CNN
+F 1 "GND" H 4305 1627 50  0000 C CNN
+F 2 "" H 4300 1800 50  0001 C CNN
+F 3 "" H 4300 1800 50  0001 C CNN
+	1    4300 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J_in1
+U 1 1 5C4BF483
+P 4100 1350
+F 0 "J_in1" H 4300 1350 50  0000 C CNN
+F 1 "In (1 a 15v)" H 4450 1100 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 4100 1350 50  0001 C CNN
+F 3 "~" H 4100 1350 50  0001 C CNN
+	1    4100 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:CAP C5
+U 1 1 5CBAE22C
+P 7350 2350
+F 0 "C5" V 7650 2300 50  0000 L CNN
+F 1 "222nF" V 7550 2300 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L10.0mm_W3.0mm_P7.50mm_MKS4" H 7350 2350 50  0001 C CNN
+F 3 "" H 7350 2350 50  0001 C CNN
+	1    7350 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pspice:CAP C3
+U 1 1 5CBAE321
+P 4700 1400
+F 0 "C3" H 4878 1446 50  0000 L CNN
+F 1 "100nF" H 4878 1355 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 4700 1400 50  0001 C CNN
+F 3 "" H 4700 1400 50  0001 C CNN
+	1    4700 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:CAP C1
+U 1 1 5CBAE367
+P 6950 1850
+F 0 "C1" H 7128 1896 50  0000 L CNN
+F 1 "1nF" H 7128 1805 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 6950 1850 50  0001 C CNN
+F 3 "" H 6950 1850 50  0001 C CNN
+	1    6950 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:CAP C4
+U 1 1 5CBAE39B
+P 8050 2350
+F 0 "C4" H 8228 2396 50  0000 L CNN
+F 1 "10nF" H 8228 2305 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 8050 2350 50  0001 C CNN
+F 3 "" H 8050 2350 50  0001 C CNN
+	1    8050 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5CBAE515
+P 5150 1750
+F 0 "R1" H 5300 1800 50  0000 C CNN
+F 1 "100Ω" H 5300 1700 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5080 1750 50  0001 C CNN
+F 3 "~" H 5150 1750 50  0001 C CNN
+	1    5150 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:CAP C6
+U 1 1 5CBAE5B5
+P 6150 3200
+F 0 "C6" H 6328 3246 50  0000 L CNN
+F 1 "451pF" H 6328 3155 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 6150 3200 50  0001 C CNN
+F 3 "" H 6150 3200 50  0001 C CNN
+	1    6150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:CAP C2
+U 1 1 5CBAE633
+P 6950 1250
+F 0 "C2" H 7128 1296 50  0000 L CNN
+F 1 "548pF" H 7128 1205 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 6950 1250 50  0001 C CNN
+F 3 "" H 6950 1250 50  0001 C CNN
+	1    6950 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC548 Q1
+U 1 1 5CBAE6F5
+P 6600 2700
+F 0 "Q1" H 6791 2746 50  0000 L CNN
+F 1 "BC548" H 6791 2655 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6800 2625 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 6600 2700 50  0001 L CNN
+	1    6600 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 1350 4300 1750
+Wire Wire Line
+	4700 1650 4700 1750
+Wire Wire Line
+	4700 1750 4300 1750
+Connection ~ 4300 1750
+Wire Wire Line
+	4300 1750 4300 1800
+Wire Wire Line
+	4700 1150 4700 900 
+Wire Wire Line
+	4700 900  4300 900 
+Wire Wire Line
+	4300 900  4300 1250
+$Comp
+L Device:R R2
+U 1 1 5CBAFBCE
+P 5150 3200
+F 0 "R2" H 5300 3250 50  0000 C CNN
+F 1 "1,5kΩ" H 5300 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5080 3200 50  0001 C CNN
+F 3 "~" H 5150 3200 50  0001 C CNN
+	1    5150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5CBAFC2A
+P 5500 3200
+F 0 "R3" H 5650 3250 50  0000 C CNN
+F 1 "1,5kΩ" H 5650 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5430 3200 50  0001 C CNN
+F 3 "~" H 5500 3200 50  0001 C CNN
+	1    5500 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5CBAFEEE
+P 6700 3200
+F 0 "R4" H 6850 3250 50  0000 C CNN
+F 1 "1kΩ" H 6850 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6630 3200 50  0001 C CNN
+F 3 "~" H 6700 3200 50  0001 C CNN
+	1    6700 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5CBAFEF5
+P 7050 3200
+F 0 "R5" H 7200 3250 50  0000 C CNN
+F 1 "1kΩ" H 7200 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6980 3200 50  0001 C CNN
+F 3 "~" H 7050 3200 50  0001 C CNN
+	1    7050 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5CBAFF6D
+P 6150 3650
+F 0 "#PWR0101" H 6150 3400 50  0001 C CNN
+F 1 "GND" H 6155 3477 50  0000 C CNN
+F 2 "" H 6150 3650 50  0001 C CNN
+F 3 "" H 6150 3650 50  0001 C CNN
+	1    6150 3650
+	1    0    0    -1  
+$EndComp
+Connection ~ 4700 900 
+Wire Wire Line
+	5500 3050 5500 2700
+Wire Wire Line
+	5500 2700 5150 2700
+Wire Wire Line
+	5150 2700 5150 3050
+Wire Wire Line
+	6400 2700 6150 2700
+Connection ~ 5500 2700
+Wire Wire Line
+	6150 2950 6150 2700
+Connection ~ 6150 2700
+Wire Wire Line
+	6150 2700 5500 2700
+Wire Wire Line
+	6150 3450 6150 3600
+Wire Wire Line
+	5150 3350 5150 3600
+Wire Wire Line
+	5150 3600 5500 3600
+Connection ~ 6150 3600
+Wire Wire Line
+	6150 3600 6150 3650
+Wire Wire Line
+	5500 3350 5500 3600
+Connection ~ 5500 3600
+Wire Wire Line
+	5500 3600 6150 3600
+Wire Wire Line
+	6150 3600 6700 3600
+Wire Wire Line
+	7050 3600 7050 3350
+Wire Wire Line
+	6700 3350 6700 3600
+Connection ~ 6700 3600
+Wire Wire Line
+	6700 3600 7050 3600
+Wire Wire Line
+	6700 2900 6700 3000
+Wire Wire Line
+	7050 3050 7050 3000
+Wire Wire Line
+	7050 3000 6700 3000
+Connection ~ 6700 3000
+Wire Wire Line
+	6700 3000 6700 3050
+Wire Wire Line
+	6950 1950 6950 2100
+Wire Wire Line
+	6250 2200 6700 2200
+Wire Wire Line
+	6700 2500 6700 2350
+Connection ~ 6700 2200
+Wire Wire Line
+	6700 2200 6950 2200
+Wire Wire Line
+	7100 2350 6700 2350
+Connection ~ 6700 2350
+Wire Wire Line
+	6700 2350 6700 2200
+Wire Wire Line
+	8050 2600 8050 3000
+Wire Wire Line
+	6950 1000 6950 900 
+Text GLabel 7600 2350 2    50   Input ~ 0
+VOut
+Wire Wire Line
+	6950 1500 6950 1600
+Wire Wire Line
+	8050 3000 7050 3000
+Connection ~ 7050 3000
+Connection ~ 6950 1600
+Wire Wire Line
+	6950 1600 6950 1650
+Wire Wire Line
+	6250 2000 6250 2200
+Connection ~ 6950 2100
+Wire Wire Line
+	6950 2100 6950 2200
+Wire Wire Line
+	8050 2100 8050 1600
+Wire Wire Line
+	8050 1600 6950 1600
+Wire Wire Line
+	4700 900  5150 900 
+Wire Wire Line
+	6250 900  6250 1500
+Wire Wire Line
+	6950 900  6250 900 
+Connection ~ 6250 900 
+Wire Wire Line
+	5150 2700 5150 1900
+Connection ~ 5150 2700
+Wire Wire Line
+	5150 1650 5150 1600
+Connection ~ 5150 900 
+Wire Wire Line
+	5150 900  6250 900 
+Connection ~ 5150 1600
+Wire Wire Line
+	5150 1600 5150 900 
+$EndSCHEMATC
