@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name buck-rescue)(type Legacy)(uri ${KIPRJMOD}/buck-rescue.lib)(options "")(descr ""))
+  (lib (name buck_boost_gnd-rescue)(type Legacy)(uri ${KIPRJMOD}/buck_boost_gnd-rescue.lib)(options "")(descr ""))
 )

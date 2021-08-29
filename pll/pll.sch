@@ -280,8 +280,6 @@ F 3 "" H 3400 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1050 1200 1050 1250
-Wire Wire Line
 	2900 1700 2700 1700
 Wire Wire Line
 	3200 1700 3400 1700
@@ -379,7 +377,7 @@ $EndComp
 Wire Wire Line
 	4250 950  4250 1500
 Text Label 5350 1500 0    59   ~ 0
-F_out_80_160khz
+F_out_70_160khz
 $Comp
 L power:GND #PWR05
 U 1 1 5D11433F
@@ -392,7 +390,7 @@ F 3 "" H 7550 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 7550 4200 2    59   ~ 0
-F_out_80_160khz
+F_out_70_160khz
 Wire Wire Line
 	8550 4200 8750 4200
 Wire Wire Line
@@ -756,11 +754,11 @@ Wire Notes Line
 Text Notes 1800 3400 0    79   ~ 0
 F_in 15 a 50 kHz | VCO usando 555
 Text Notes 1300 850  0    79   ~ 0
-Porta XOR
+Comparador de fase
 Text Notes 3100 1150 0    79   ~ 0
 Filtro
 Text Notes 4550 750  0    79   ~ 0
-F_out 80 a 160 kHz | VCO usando 555
+F_out 70 a 160 kHz | VCO usando 555
 Text Notes 8000 1000 0    79   ~ 0
 Alimentação 7 a 25 V para 5 V, usando LM7805
 $Bitmap
