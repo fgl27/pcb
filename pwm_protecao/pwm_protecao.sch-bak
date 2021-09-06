@@ -25,7 +25,7 @@ F 3 "" H 3200 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 1450 1050 0    79   ~ 0
-1. Geração dente de serra, 19kHz
+1. PWM, F ≈ 19kHz, Duty 10 a 100%
 Text Notes 3600 650  0    79   ~ 0
 Módulo de acionamento PWM com proteções para MOSFETs
 $Comp
@@ -52,8 +52,6 @@ F 3 "" H 4000 2900 50  0001 C CNN
 	1    4000 2900
 	1    0    0    -1  
 $EndComp
-Text Notes 6500 1000 0    79   ~ 0
-2. Comparador - Amplificação - PWM - duty 0 até 83%
 Wire Notes Line
 	3300 6000 3300 3550
 Wire Notes Line
@@ -226,84 +224,6 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 4400 1900 50  0001 L CNN
 	1    4400 1900
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6950 2250 6950 2150
-$Comp
-L power:GND #PWR022
-U 1 1 5DBBE92E
-P 6950 2250
-F 0 "#PWR022" H 6950 2000 50  0001 C CNN
-F 1 "GND" H 6955 2077 50  0000 C CNN
-F 2 "" H 6950 2250 50  0001 C CNN
-F 3 "" H 6950 2250 50  0001 C CNN
-	1    6950 2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6950 1850 6950 1750
-Wire Wire Line
-	7100 2000 7600 2000
-$Comp
-L Device:R R9
-U 1 1 5DBA4C8A
-P 6950 1600
-F 0 "R9" H 6800 1650 50  0000 C CNN
-F 1 "10kΩ" H 6800 1550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6880 1600 50  0001 C CNN
-F 3 "~" H 6950 1600 50  0001 C CNN
-	1    6950 1600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6950 1450 6950 1350
-$Comp
-L power:+12V #PWR021
-U 1 1 5DBA4C83
-P 6950 1350
-F 0 "#PWR021" H 6950 1200 50  0001 C CNN
-F 1 "+12V" H 6965 1523 50  0000 C CNN
-F 2 "" H 6950 1350 50  0001 C CNN
-F 3 "" H 6950 1350 50  0001 C CNN
-	1    6950 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT POT1
-U 1 1 5DBA4C7C
-P 6950 2000
-F 0 "POT1" H 6850 2050 50  0000 R CNN
-F 1 "200kΩ" H 6900 1950 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK163_Single_Horizontal" H 6950 2000 50  0001 C CNN
-F 3 "~" H 6950 2000 50  0001 C CNN
-	1    6950 2000
-	1    0    0    -1  
-$EndComp
-Text Label 7600 1800 2    59   ~ 0
-F_Serra
-Text Label 8950 1700 0    59   ~ 0
-PWM
-$Comp
-L power:+12V #PWR010
-U 1 1 5DAD20E8
-P 7800 1600
-F 0 "#PWR010" H 7800 1450 50  0001 C CNN
-F 1 "+12V" H 7815 1773 50  0000 C CNN
-F 2 "" H 7800 1600 50  0001 C CNN
-F 3 "" H 7800 1600 50  0001 C CNN
-	1    7800 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR011
-U 1 1 5DAD5731
-P 7800 2200
-F 0 "#PWR011" H 7800 1950 50  0001 C CNN
-F 1 "GND" H 7805 2027 50  0000 C CNN
-F 2 "" H 7800 2200 50  0001 C CNN
-F 3 "" H 7800 2200 50  0001 C CNN
-	1    7800 2200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Timer:NE555 U5
 U 1 1 5D10D5C0
@@ -313,17 +233,6 @@ F 1 "NE555" H 3200 2200 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 3200 2200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 3200 2200 50  0001 C CNN
 	1    3200 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:LF357 U4
-U 1 1 5DC40DA7
-P 7900 1900
-F 0 "U4" H 8000 2200 50  0000 L CNN
-F 1 "LF357" H 7950 2100 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 7950 1950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl081.pdf" H 8050 2050 50  0001 C CNN
-	1    7900 1900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -369,68 +278,6 @@ F 3 "" H 2700 2550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2700 2550 2700 2400
-$Comp
-L Transistor_BJT:PN2222A Q2
-U 1 1 61472080
-P 8700 1900
-F 0 "Q2" H 8890 1946 50  0000 L CNN
-F 1 "PN2222A" H 8890 1855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8900 1825 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF" H 8700 1900 50  0001 L CNN
-	1    8700 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 61498B35
-P 8350 1900
-F 0 "R1" V 8450 1900 50  0000 C CNN
-F 1 "1kΩ" V 8550 1900 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8280 1900 50  0001 C CNN
-F 3 "~" H 8350 1900 50  0001 C CNN
-	1    8350 1900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR04
-U 1 1 614A25EC
-P 8800 2100
-F 0 "#PWR04" H 8800 1850 50  0001 C CNN
-F 1 "GND" H 8805 1927 50  0000 C CNN
-F 2 "" H 8800 2100 50  0001 C CNN
-F 3 "" H 8800 2100 50  0001 C CNN
-	1    8800 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 614A4C99
-P 8800 1550
-F 0 "R2" H 8950 1500 50  0000 C CNN
-F 1 "1kΩ" H 8950 1600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8730 1550 50  0001 C CNN
-F 3 "~" H 8800 1550 50  0001 C CNN
-	1    8800 1550
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+12V #PWR02
-U 1 1 614A9DF5
-P 8800 1400
-F 0 "#PWR02" H 8800 1250 50  0001 C CNN
-F 1 "+12V" H 8815 1573 50  0000 C CNN
-F 2 "" H 8800 1400 50  0001 C CNN
-F 3 "" H 8800 1400 50  0001 C CNN
-	1    8800 1400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8950 1700 8800 1700
-Connection ~ 8800 1700
-Wire Notes Line
-	6500 2950 9550 2950
-Wire Notes Line
-	6500 1100 9550 1100
 Wire Wire Line
 	2100 2000 2000 2000
 Connection ~ 2100 2000
@@ -535,7 +382,7 @@ L Device:R R3
 U 1 1 61558ECD
 P 9350 5200
 F 0 "R3" H 9500 5250 50  0000 C CNN
-F 1 "100Ω" H 9500 5150 50  0000 C CNN
+F 1 "330Ω" H 9500 5150 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9280 5200 50  0001 C CNN
 F 3 "~" H 9350 5200 50  0001 C CNN
 	1    9350 5200
@@ -553,13 +400,7 @@ F 3 "" H 9350 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 950  7100 0    79   ~ 0
-Como o circuito foi desenvolvido para demostrar funcionamento de um boost\no Duty foi limitado a no máximo 83%, impedindo assim colocar a fonte em curto\n\nCaso a frequência necessária, impeça o uso do optocoupler, substitua este por um diodo\nde preferencia um que suporte 100V ou mais\nconecte apenas a saída do PWM no diodo e a saída do diodo na base dos transistores
-Text Notes 6650 2850 0    79   ~ 0
-O Duty é limitado em no máximo ≈ 83%\nImpedindo assim colocar a fonte em curto\nAjustável usando o Controle / potenciômetro
-Wire Notes Line
-	9550 1100 9550 2950
-Wire Notes Line
-	6500 1100 6500 2950
+Como o circuito foi desenvolvido para demostrar funcionamento de um boost\no Duty foi limitado a no máximo 83%, impedindo assim colocar a fonte em curto\n\nCaso a frequência necessária, impeça o uso do optocoupler, use o isolamento com diodo\nuse diodos com tensão reversa de pelo menos 100V
 Wire Wire Line
 	4550 4550 4550 4450
 Wire Wire Line
@@ -601,7 +442,7 @@ Wire Notes Line
 Wire Notes Line
 	4100 6000 6600 6000
 Text Notes 4150 3400 0    79   ~ 0
-3.2 Isolamento e acionamento MOSFET
+3.2 Proteções e acionamento MOSFET
 Wire Wire Line
 	5250 4650 5250 4400
 $Comp
@@ -620,7 +461,7 @@ L Device:R R5
 U 1 1 61374789
 P 4550 4300
 F 0 "R5" H 4700 4350 50  0000 C CNN
-F 1 "220Ω" H 4700 4250 50  0000 C CNN
+F 1 "470Ω" H 4700 4250 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4480 4300 50  0001 C CNN
 F 3 "~" H 4550 4300 50  0001 C CNN
 	1    4550 4300
