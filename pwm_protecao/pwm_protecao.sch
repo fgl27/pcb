@@ -576,4 +576,6 @@ Wire Wire Line
 	6100 2150 6750 2150
 Text Notes 3850 3000 0    79   ~ 0
 Ajustando o controle / potenciômetro se ajusta o Duty.
+Text Notes 7300 6350 0    79   ~ 0
+Felipe Leon - 2021
 $EndSCHEMATC

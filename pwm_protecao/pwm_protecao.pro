@@ -1,4 +1,4 @@
-update=seg 06 set 2021 11:20:44
+update=seg 06 set 2021 17:06:01
 version=1
 last_client=kicad
 [general]
@@ -34,7 +34,7 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=/home/fgl27/Documents/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
