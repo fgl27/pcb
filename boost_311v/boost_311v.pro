@@ -1,4 +1,4 @@
-update=ter 07 set 2021 14:27:17
+update=ter 07 set 2021 18:25:33
 version=1
 last_client=kicad
 [general]

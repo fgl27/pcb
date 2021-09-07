@@ -18,7 +18,7 @@ Text Notes 6450 2450 0    79   ~ 0
 Text Notes 7000 1900 0    79   ~ 0
 Conversor CC-CC - Boost 24V para 311V - 0,3A
 Text Notes 10650 2400 0    79   ~ 0
-3. Comparador - Amplificação - PWM - duty 0 até 75%
+3. Comparador - Amplificação - PWM - duty 0 até 73%
 Wire Notes Line
 	5500 4600 5500 2550
 Wire Notes Line
@@ -347,9 +347,9 @@ F 3 "~" H 12450 2900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	12200 3200 12200 2900
-Text Notes 11000 4650 0    59   ~ 0
-O Duty é limitado em no máximo ≈ 75%\nImpedindo assim colocar a fonte em curto\n\nIsso ocorre pois a tensão máxima da dente de serra\né em torno de 7V, quando a tensão V_cnt > 7V a \nsaída do comparador vai para 0V\nO transistor amplifica e inverte a saída do comparador
-Text Label 12000 3600 2    59   ~ 0
+Text Notes 11100 4700 0    59   ~ 0
+O Duty é limitado em no máximo ≈ 73%\nImpedindo assim colocar a fonte em curto\n\nTensão dente de serra é em torno de 8.8V, zener 6,5V\n\nO transistor amplifica e inverte a saída do comparador
+Text Label 11350 3600 2    59   ~ 0
 V_cnt
 $Comp
 L Regulator_Linear:LM7812_TO220 U2
@@ -367,7 +367,7 @@ L pspice:CAP C14
 U 1 1 6165CA3F
 P 4200 3200
 F 0 "C14" H 4300 3350 50  0000 L CNN
-F 1 "100pF" H 4300 3100 50  0000 L CNN
+F 1 "100nF" H 4300 3100 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 4200 3200 50  0001 C CNN
 F 3 "~" H 4200 3200 50  0001 C CNN
 	1    4200 3200
@@ -421,7 +421,7 @@ L pspice:CAP C13
 U 1 1 6165F9B1
 P 3050 3200
 F 0 "C13" H 3150 3350 50  0000 L CNN
-F 1 "100pF" H 3150 3100 50  0000 L CNN
+F 1 "10µF" H 3150 3100 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 3050 3200 50  0001 C CNN
 F 3 "~" H 3050 3200 50  0001 C CNN
 	1    3050 3200
@@ -486,9 +486,7 @@ Wire Notes Line
 	13750 5150 13750 7300
 Text Notes 11300 7250 0    59   ~ 0
 Ajustando o controle / potenciômetro\nAjusta-se a tensão de referência\ne assim ajusta-se a tensão de saída VO
-Wire Wire Line
-	11000 6750 11000 6150
-Text Label 11000 6750 0    59   ~ 0
+Text Label 11000 5950 0    59   ~ 0
 12V_L7812
 Wire Notes Line
 	10850 5150 13750 5150
@@ -637,95 +635,87 @@ F 3 "~" H 11750 6500 50  0001 C CNN
 	1    11750 6500
 	1    0    0    -1  
 $EndComp
-Wire Notes Line
-	10850 7700 10850 9000
-Wire Notes Line
-	13100 9000 10850 9000
-Wire Notes Line
-	13100 7700 13100 9000
-Wire Notes Line
-	10850 7700 13100 7700
 Text Notes 10700 7550 0    79   ~ 0
 7. LM358 Alimentação e proteção OP-AMP não usado
 Wire Wire Line
-	12850 8650 12850 8400
+	13550 8700 13550 8450
 Wire Wire Line
-	12250 8650 12850 8650
+	12950 8700 13550 8700
 Wire Wire Line
-	12250 8500 12250 8650
-Connection ~ 11850 8300
+	12950 8550 12950 8700
+Connection ~ 12550 8350
 Wire Wire Line
-	12250 8300 11850 8300
+	12950 8350 12550 8350
 Wire Wire Line
-	11850 7900 11200 7900
+	12550 7950 11900 7950
 Wire Wire Line
-	11850 8000 11850 7900
+	12550 8050 12550 7950
 $Comp
 L Device:R R13
 U 1 1 6176F609
-P 11850 8450
-F 0 "R13" H 12000 8450 50  0000 C CNN
-F 1 "10kΩ" H 12050 8550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11780 8450 50  0001 C CNN
-F 3 "~" H 11850 8450 50  0001 C CNN
-	1    11850 8450
+P 12550 8500
+F 0 "R13" H 12700 8500 50  0000 C CNN
+F 1 "10kΩ" H 12750 8600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 12480 8500 50  0001 C CNN
+F 3 "~" H 12550 8500 50  0001 C CNN
+	1    12550 8500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R12
 U 1 1 6176F5FC
-P 11850 8150
-F 0 "R12" H 12000 8150 50  0000 C CNN
-F 1 "10KΩ" H 12050 8250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11780 8150 50  0001 C CNN
-F 3 "~" H 11850 8150 50  0001 C CNN
-	1    11850 8150
+P 12550 8200
+F 0 "R12" H 12700 8200 50  0000 C CNN
+F 1 "10KΩ" H 12750 8300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 12480 8200 50  0001 C CNN
+F 3 "~" H 12550 8200 50  0001 C CNN
+	1    12550 8200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR025
 U 1 1 6176F5F5
-P 11850 8600
-F 0 "#PWR025" H 11850 8350 50  0001 C CNN
-F 1 "GND" H 11855 8427 50  0000 C CNN
-F 2 "" H 11850 8600 50  0001 C CNN
-F 3 "" H 11850 8600 50  0001 C CNN
-	1    11850 8600
+P 12550 8650
+F 0 "#PWR025" H 12550 8400 50  0001 C CNN
+F 1 "GND" H 12555 8477 50  0000 C CNN
+F 2 "" H 12550 8650 50  0001 C CNN
+F 3 "" H 12550 8650 50  0001 C CNN
+	1    12550 8650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR024
 U 1 1 61740376
-P 11200 8600
-F 0 "#PWR024" H 11200 8350 50  0001 C CNN
-F 1 "GND" H 11205 8427 50  0000 C CNN
-F 2 "" H 11200 8600 50  0001 C CNN
-F 3 "" H 11200 8600 50  0001 C CNN
-	1    11200 8600
+P 11900 8650
+F 0 "#PWR024" H 11900 8400 50  0001 C CNN
+F 1 "GND" H 11905 8477 50  0000 C CNN
+F 2 "" H 11900 8650 50  0001 C CNN
+F 3 "" H 11900 8650 50  0001 C CNN
+	1    11900 8650
 	1    0    0    -1  
 $EndComp
-Text Label 11200 7900 0    59   ~ 0
+Text Label 11450 7950 2    59   ~ 0
 12V_L7812
 $Comp
 L Amplifier_Operational:LM358 U1
 U 3 1 613DEC29
-P 11300 8200
-F 0 "U1" H 11258 8246 50  0000 L CNN
-F 1 "LM358" H 11258 8155 50  0000 L CNN
-F 2 "" H 11300 8200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 11300 8200 50  0001 C CNN
-	3    11300 8200
+P 12000 8250
+F 0 "U1" H 11958 8296 50  0000 L CNN
+F 1 "LM358" H 11958 8205 50  0000 L CNN
+F 2 "" H 12000 8250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 12000 8250 50  0001 C CNN
+	3    12000 8250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:LM358 U1
 U 1 1 613DA37F
-P 12550 8400
-F 0 "U1" H 12550 8767 50  0000 C CNN
-F 1 "LM358" H 12550 8676 50  0000 C CNN
-F 2 "" H 12550 8400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 12550 8400 50  0001 C CNN
-	1    12550 8400
+P 13250 8450
+F 0 "U1" H 13250 8817 50  0000 C CNN
+F 1 "LM358" H 13250 8726 50  0000 C CNN
+F 2 "" H 13250 8450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 13250 8450 50  0001 C CNN
+	1    13250 8450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1258,4 +1248,86 @@ Wire Wire Line
 	9200 6850 9200 6800
 Wire Wire Line
 	9850 7050 9850 7200
+$Comp
+L Device:D_Zener D7
+U 1 1 6138527C
+P 11800 3750
+F 0 "D7" V 11800 3950 50  0000 R CNN
+F 1 "D_Zener_6,5V" V 11700 4300 50  0000 R CNN
+F 2 "" H 11800 3750 50  0001 C CNN
+F 3 "~" H 11800 3750 50  0001 C CNN
+	1    11800 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 61393844
+P 11800 3900
+F 0 "#PWR06" H 11800 3650 50  0001 C CNN
+F 1 "GND" H 11805 3727 50  0000 C CNN
+F 2 "" H 11800 3900 50  0001 C CNN
+F 3 "" H 11800 3900 50  0001 C CNN
+	1    11800 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11800 3600 11650 3600
+$Comp
+L Device:R R19
+U 1 1 613A866C
+P 11500 3600
+F 0 "R19" V 11700 3600 50  0000 C CNN
+F 1 "1kΩ" V 11600 3600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11430 3600 50  0001 C CNN
+F 3 "~" H 11500 3600 50  0001 C CNN
+	1    11500 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11800 3600 12000 3600
+Connection ~ 11800 3600
+$Comp
+L pspice:CAP C15
+U 1 1 613D8A3F
+P 11550 8400
+F 0 "C15" H 11200 8550 50  0000 L CNN
+F 1 "100nF" H 11150 8250 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 11550 8400 50  0001 C CNN
+F 3 "~" H 11550 8400 50  0001 C CNN
+	1    11550 8400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 613D8A45
+P 11550 8650
+F 0 "#PWR07" H 11550 8400 50  0001 C CNN
+F 1 "GND" H 11555 8477 50  0000 C CNN
+F 2 "" H 11550 8650 50  0001 C CNN
+F 3 "" H 11550 8650 50  0001 C CNN
+	1    11550 8650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11550 8150 11550 7950
+Wire Wire Line
+	11550 7950 11900 7950
+Connection ~ 11900 7950
+Wire Wire Line
+	11900 8650 11900 8550
+Wire Wire Line
+	11550 7950 11450 7950
+Connection ~ 11550 7950
+Wire Notes Line
+	13750 7700 13750 9050
+Wire Notes Line
+	10850 7700 13750 7700
+Wire Notes Line
+	10850 7700 10850 9050
+Wire Notes Line
+	10850 9050 13750 9050
+Wire Wire Line
+	11000 6150 11000 5950
+Text Label 12050 6500 0    50   ~ 0
+V_REF
 $EndSCHEMATC
