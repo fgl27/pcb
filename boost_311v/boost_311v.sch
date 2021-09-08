@@ -439,14 +439,10 @@ Wire Notes Line
 	10850 5150 10850 7300
 Wire Notes Line
 	13750 5150 13750 7300
-Text Notes 11300 7250 0    59   ~ 0
-Ajustando o controle / potenciômetro\nAjusta-se a tensão de referência\ne assim ajusta-se a tensão de saída VO
 Text Label 11000 5850 0    59   ~ 0
 12V_L7812
 Wire Notes Line
 	10850 5150 13750 5150
-Wire Notes Line
-	13750 7300 10850 7300
 Text Notes 11650 5050 0    79   ~ 0
 6. Controlador tipo II
 Wire Wire Line
@@ -465,12 +461,6 @@ Wire Wire Line
 Text Label 13300 6400 0    59   ~ 0
 V_cnt
 Wire Wire Line
-	11400 6150 11300 6150
-Wire Wire Line
-	11750 6150 11750 6350
-Wire Wire Line
-	11750 6150 11700 6150
-Wire Wire Line
 	11900 6500 12300 6500
 Connection ~ 12050 5550
 Wire Wire Line
@@ -487,28 +477,6 @@ Wire Wire Line
 	13250 5550 13250 6000
 Wire Wire Line
 	12900 5550 13250 5550
-$Comp
-L Device:R R6
-U 1 1 61494218
-P 11150 6150
-F 0 "R6" V 11350 6150 50  0000 C CNN
-F 1 "220kΩ" V 11250 6150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11080 6150 50  0001 C CNN
-F 3 "~" H 11150 6150 50  0001 C CNN
-	1    11150 6150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 61491EEA
-P 11550 6150
-F 0 "R7" V 11750 6150 50  0000 C CNN
-F 1 "220kΩ" V 11650 6150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11480 6150 50  0001 C CNN
-F 3 "~" H 11550 6150 50  0001 C CNN
-	1    11550 6150
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Amplifier_Operational:LM358 U1
 U 2 1 613DCA5B
@@ -566,102 +534,6 @@ F 3 "~" H 11750 5550 50  0001 C CNN
 $EndComp
 Text Label 11600 5550 2    59   ~ 0
 1%_VO
-Wire Wire Line
-	11750 6750 11750 6650
-$Comp
-L power:GND #PWR018
-U 1 1 613D7915
-P 11750 6750
-F 0 "#PWR018" H 11750 6500 50  0001 C CNN
-F 1 "GND" H 11755 6577 50  0000 C CNN
-F 2 "" H 11750 6750 50  0001 C CNN
-F 3 "" H 11750 6750 50  0001 C CNN
-	1    11750 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT POT1
-U 1 1 613D790D
-P 11750 6500
-F 0 "POT1" H 11650 6550 50  0000 R CNN
-F 1 "200kΩ" H 11650 6450 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK163_Single_Horizontal" H 11750 6500 50  0001 C CNN
-F 3 "~" H 11750 6500 50  0001 C CNN
-	1    11750 6500
-	1    0    0    -1  
-$EndComp
-Text Notes 10700 7550 0    79   ~ 0
-7. LM358 Alimentação e proteção OP-AMP não usado
-Wire Wire Line
-	13550 8700 13550 8450
-Wire Wire Line
-	12950 8700 13550 8700
-Wire Wire Line
-	12950 8550 12950 8700
-Connection ~ 12550 8350
-Wire Wire Line
-	12950 8350 12550 8350
-Wire Wire Line
-	12550 7950 11900 7950
-Wire Wire Line
-	12550 8050 12550 7950
-$Comp
-L Device:R R13
-U 1 1 6176F609
-P 12550 8500
-F 0 "R13" H 12700 8550 50  0000 C CNN
-F 1 "10kΩ" H 12700 8450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 12480 8500 50  0001 C CNN
-F 3 "~" H 12550 8500 50  0001 C CNN
-	1    12550 8500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R12
-U 1 1 6176F5FC
-P 12550 8200
-F 0 "R12" H 12700 8250 50  0000 C CNN
-F 1 "10KΩ" H 12700 8150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 12480 8200 50  0001 C CNN
-F 3 "~" H 12550 8200 50  0001 C CNN
-	1    12550 8200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR024
-U 1 1 61740376
-P 11900 8650
-F 0 "#PWR024" H 11900 8400 50  0001 C CNN
-F 1 "GND" H 11905 8477 50  0000 C CNN
-F 2 "" H 11900 8650 50  0001 C CNN
-F 3 "" H 11900 8650 50  0001 C CNN
-	1    11900 8650
-	1    0    0    -1  
-$EndComp
-Text Label 11450 7950 2    59   ~ 0
-12V_L7812
-$Comp
-L Amplifier_Operational:LM358 U1
-U 3 1 613DEC29
-P 12000 8250
-F 0 "U1" H 11958 8296 50  0000 L CNN
-F 1 "LM358" H 11958 8205 50  0000 L CNN
-F 2 "" H 12000 8250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 12000 8250 50  0001 C CNN
-	3    12000 8250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:LM358 U1
-U 1 1 613DA37F
-P 13250 8450
-F 0 "U1" H 13250 8817 50  0000 C CNN
-F 1 "LM358" H 13250 8726 50  0000 C CNN
-F 2 "" H 13250 8450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 13250 8450 50  0001 C CNN
-	1    13250 8450
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR023
 U 1 1 61A2CBFF
@@ -687,12 +559,12 @@ $EndComp
 $Comp
 L Device:R R4
 U 1 1 614329D7
-P 9850 7350
-F 0 "R4" H 10000 7400 50  0000 C CNN
-F 1 "10,1kΩ" H 10050 7300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9780 7350 50  0001 C CNN
-F 3 "~" H 9850 7350 50  0001 C CNN
-	1    9850 7350
+P 9850 7950
+F 0 "R4" H 10000 8000 50  0000 C CNN
+F 1 "10kΩ" H 10050 7900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9780 7950 50  0001 C CNN
+F 3 "~" H 9850 7950 50  0001 C CNN
+	1    9850 7950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -789,45 +661,39 @@ F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 7450 6500 50  0001 C CNN
 	1    7450 6500
 	-1   0    0    1   
 $EndComp
-Text Notes 5200 7750 0    79   ~ 0
-Tensão máxima, MOSFET, DIODOS e CAPACITORES 200V !!!
+Text Notes 5050 7900 0    79   ~ 0
+                   Tensão máxima\nMOSFET, DIODOS, CAPACITORES e RESISTORES de 1/4 é 200V !!!
 Text Notes 9500 6050 0    49   ~ 0
 Carga Máxima 0,3A\n1kΩ quando VO = 311V
-Wire Notes Line
-	10450 5100 10450 8000
-Wire Notes Line
-	4950 5100 4950 8000
 Text Notes 6850 4950 0    79   ~ 0
 5. Boost 24V para 311V - 0,3A
 Wire Wire Line
-	9850 7000 9950 7000
-Text Label 9950 7000 0    59   ~ 0
+	9850 7600 9950 7600
+Text Label 9950 7600 0    59   ~ 0
 1%_VO
 Connection ~ 9400 6200
-Wire Wire Line
-	9850 6650 9850 6200
 $Comp
 L Device:R R3
 U 1 1 6143688B
-P 9850 6800
-F 0 "R3" H 10000 6850 50  0000 C CNN
-F 1 "1MΩ" H 10000 6750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9780 6800 50  0001 C CNN
-F 3 "~" H 9850 6800 50  0001 C CNN
-	1    9850 6800
+P 9850 7400
+F 0 "R3" H 10000 7450 50  0000 C CNN
+F 1 "330kΩ" H 10050 7350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9780 7400 50  0001 C CNN
+F 3 "~" H 9850 7400 50  0001 C CNN
+	1    9850 7400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9850 7650 9850 7550
+	9850 8250 9850 8150
 $Comp
 L power:GND #PWR017
 U 1 1 614329DD
-P 9850 7650
-F 0 "#PWR017" H 9850 7400 50  0001 C CNN
-F 1 "GND" H 9855 7477 50  0000 C CNN
-F 2 "" H 9850 7650 50  0001 C CNN
-F 3 "" H 9850 7650 50  0001 C CNN
-	1    9850 7650
+P 9850 8250
+F 0 "#PWR017" H 9850 8000 50  0001 C CNN
+F 1 "GND" H 9855 8077 50  0000 C CNN
+F 2 "" H 9850 8250 50  0001 C CNN
+F 3 "" H 9850 8250 50  0001 C CNN
+	1    9850 8250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1085,7 +951,7 @@ F 3 "~" H 5200 6900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Notes Line
-	4950 8000 10450 8000
+	4950 8550 10450 8550
 Wire Notes Line
 	4950 5100 10450 5100
 Wire Wire Line
@@ -1096,46 +962,21 @@ Wire Wire Line
 	5800 7100 5400 7100
 Wire Wire Line
 	5400 7100 5400 6900
-Text Notes 11350 9500 0    79   ~ 0
-Felipe Leon - 2021
 $Comp
 L Device:R R18
 U 1 1 613AAFEF
-P 9200 7350
-F 0 "R18" H 9350 7400 50  0000 C CNN
-F 1 "100kΩ" H 9400 7300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 7350 50  0001 C CNN
-F 3 "~" H 9200 7350 50  0001 C CNN
-	1    9200 7350
+P 9200 7950
+F 0 "R18" H 9350 8000 50  0000 C CNN
+F 1 "100kΩ" H 9400 7900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 7950 50  0001 C CNN
+F 3 "~" H 9200 7950 50  0001 C CNN
+	1    9200 7950
 	1    0    0    -1  
 $EndComp
-Text Label 9450 7000 0    59   ~ 0
+Text Label 9450 7600 0    59   ~ 0
 10%_VO
-$Comp
-L Device:R R17
-U 1 1 613AAFFB
-P 9200 6650
-F 0 "R17" H 9350 6700 50  0000 C CNN
-F 1 "1MΩ" H 9350 6600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 6650 50  0001 C CNN
-F 3 "~" H 9200 6650 50  0001 C CNN
-	1    9200 6650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	9150 6200 9200 6200
-Wire Wire Line
-	9200 6500 9200 6200
-Connection ~ 9200 6200
-Wire Wire Line
-	9200 6200 9400 6200
-Connection ~ 9850 6200
-Wire Wire Line
-	9850 6200 9950 6200
-Wire Wire Line
-	9400 6200 9850 6200
-Wire Wire Line
-	9450 7000 9400 7000
+	9450 7600 9400 7600
 $Comp
 L Device:D_Zener D7
 U 1 1 6138527C
@@ -1174,35 +1015,6 @@ $EndComp
 Wire Wire Line
 	11800 3600 12000 3600
 Connection ~ 11800 3600
-$Comp
-L pspice:CAP C15
-U 1 1 613D8A3F
-P 11550 8400
-F 0 "C15" H 11200 8500 50  0000 L CNN
-F 1 "100nF" H 11150 8400 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 11550 8400 50  0001 C CNN
-F 3 "~" H 11550 8400 50  0001 C CNN
-	1    11550 8400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11550 8150 11550 7950
-Wire Wire Line
-	11550 7950 11900 7950
-Connection ~ 11900 7950
-Wire Wire Line
-	11900 8650 11900 8550
-Wire Wire Line
-	11550 7950 11450 7950
-Connection ~ 11550 7950
-Wire Notes Line
-	13750 7700 13750 9050
-Wire Notes Line
-	10850 7700 13750 7700
-Wire Notes Line
-	10850 7700 10850 9050
-Wire Notes Line
-	10850 9050 13750 9050
 Text Label 12050 6500 0    50   ~ 0
 V_REF
 Wire Wire Line
@@ -1280,31 +1092,30 @@ Connection ~ 8850 2800
 $Comp
 L Device:R_POT_TRIM TRIM_POT2
 U 1 1 6148A376
-P 9200 7000
-F 0 "TRIM_POT2" H 9130 7046 50  0000 R CNN
-F 1 "100kΩ" H 9130 6955 50  0000 R CNN
-F 2 "" H 9200 7000 50  0001 C CNN
-F 3 "~" H 9200 7000 50  0001 C CNN
-	1    9200 7000
+P 9200 7600
+F 0 "TRIM_POT2" H 9130 7646 50  0000 R CNN
+F 1 "22kΩ" H 9130 7555 50  0000 R CNN
+F 2 "" H 9200 7600 50  0001 C CNN
+F 3 "~" H 9200 7600 50  0001 C CNN
+	1    9200 7600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9200 7200 9200 7150
+	9200 7800 9200 7750
 Wire Wire Line
-	9200 6850 9200 6800
-Connection ~ 9200 6800
+	9200 7450 9200 7400
 Wire Wire Line
-	9400 7000 9400 6800
+	9400 7600 9400 7400
 Wire Wire Line
-	9200 6800 9400 6800
-Connection ~ 9400 7000
+	9200 7400 9400 7400
+Connection ~ 9400 7600
 Wire Wire Line
-	9400 7000 9350 7000
-Connection ~ 9850 7000
+	9400 7600 9350 7600
+Connection ~ 9850 7600
 Wire Wire Line
-	9850 7000 9850 6950
+	9850 7600 9850 7550
 Wire Wire Line
-	9850 7000 9850 7200
+	9850 7600 9850 7800
 Text Label 6800 4250 0    59   ~ 0
 12V_L7812
 Wire Wire Line
@@ -1321,18 +1132,13 @@ Wire Wire Line
 	13200 2900 13200 2800
 Wire Wire Line
 	11000 5850 11000 6150
-Connection ~ 11900 8650
 Wire Wire Line
-	11900 8650 11550 8650
+	9200 8150 9850 8150
 Wire Wire Line
-	11900 8650 12550 8650
+	9200 8150 9200 8100
+Connection ~ 9850 8150
 Wire Wire Line
-	9200 7550 9850 7550
-Wire Wire Line
-	9200 7550 9200 7500
-Connection ~ 9850 7550
-Wire Wire Line
-	9850 7550 9850 7500
+	9850 8150 9850 8100
 Wire Wire Line
 	3050 3450 2750 3450
 Connection ~ 3050 3450
@@ -1349,4 +1155,254 @@ Wire Notes Line
 	5500 2550 5500 4750
 Wire Notes Line
 	9800 4750 5500 4750
+$Comp
+L Device:R_POT POT1
+U 1 1 613D790D
+P 11750 6500
+F 0 "POT1" H 11650 6550 50  0000 R CNN
+F 1 "200kΩ" H 11650 6450 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK163_Single_Horizontal" H 11750 6500 50  0001 C CNN
+F 3 "~" H 11750 6500 50  0001 C CNN
+	1    11750 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 613D7915
+P 11750 6750
+F 0 "#PWR018" H 11750 6500 50  0001 C CNN
+F 1 "GND" H 11755 6577 50  0000 C CNN
+F 2 "" H 11750 6750 50  0001 C CNN
+F 3 "" H 11750 6750 50  0001 C CNN
+	1    11750 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11750 6750 11750 6650
+$Comp
+L Device:R R7
+U 1 1 61491EEA
+P 11550 6150
+F 0 "R7" V 11750 6150 50  0000 C CNN
+F 1 "220kΩ" V 11650 6150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11480 6150 50  0001 C CNN
+F 3 "~" H 11550 6150 50  0001 C CNN
+	1    11550 6150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 61494218
+P 11150 6150
+F 0 "R6" V 11350 6150 50  0000 C CNN
+F 1 "220kΩ" V 11250 6150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11080 6150 50  0001 C CNN
+F 3 "~" H 11150 6150 50  0001 C CNN
+	1    11150 6150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11750 6150 11700 6150
+Wire Wire Line
+	11750 6150 11750 6350
+Wire Wire Line
+	11400 6150 11300 6150
+Text Notes 11300 7250 0    59   ~ 0
+Ajustando o controle / potenciômetro\nAjusta-se a tensão de referência\ne assim ajusta-se a tensão de saída VO
+Wire Notes Line
+	13750 7300 10850 7300
+Wire Wire Line
+	11900 8650 12550 8650
+Wire Wire Line
+	11900 8650 11550 8650
+Connection ~ 11900 8650
+Wire Notes Line
+	10850 9050 13750 9050
+Wire Notes Line
+	10850 7700 10850 9050
+Wire Notes Line
+	10850 7700 13750 7700
+Wire Notes Line
+	13750 7700 13750 9050
+Connection ~ 11550 7950
+Wire Wire Line
+	11550 7950 11450 7950
+Wire Wire Line
+	11900 8650 11900 8550
+Connection ~ 11900 7950
+Wire Wire Line
+	11550 7950 11900 7950
+Wire Wire Line
+	11550 8150 11550 7950
+$Comp
+L pspice:CAP C15
+U 1 1 613D8A3F
+P 11550 8400
+F 0 "C15" H 11200 8500 50  0000 L CNN
+F 1 "100nF" H 11150 8400 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 11550 8400 50  0001 C CNN
+F 3 "~" H 11550 8400 50  0001 C CNN
+	1    11550 8400
+	1    0    0    -1  
+$EndComp
+Text Notes 11350 9500 0    79   ~ 0
+Felipe Leon - 2021
+$Comp
+L Amplifier_Operational:LM358 U1
+U 1 1 613DA37F
+P 13250 8450
+F 0 "U1" H 13250 8817 50  0000 C CNN
+F 1 "LM358" H 13250 8726 50  0000 C CNN
+F 2 "" H 13250 8450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 13250 8450 50  0001 C CNN
+	1    13250 8450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U1
+U 3 1 613DEC29
+P 12000 8250
+F 0 "U1" H 11958 8296 50  0000 L CNN
+F 1 "LM358" H 11958 8205 50  0000 L CNN
+F 2 "" H 12000 8250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 12000 8250 50  0001 C CNN
+	3    12000 8250
+	1    0    0    -1  
+$EndComp
+Text Label 11450 7950 2    59   ~ 0
+12V_L7812
+$Comp
+L power:GND #PWR024
+U 1 1 61740376
+P 11900 8650
+F 0 "#PWR024" H 11900 8400 50  0001 C CNN
+F 1 "GND" H 11905 8477 50  0000 C CNN
+F 2 "" H 11900 8650 50  0001 C CNN
+F 3 "" H 11900 8650 50  0001 C CNN
+	1    11900 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 6176F5FC
+P 12550 8200
+F 0 "R12" H 12700 8250 50  0000 C CNN
+F 1 "10KΩ" H 12700 8150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 12480 8200 50  0001 C CNN
+F 3 "~" H 12550 8200 50  0001 C CNN
+	1    12550 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 6176F609
+P 12550 8500
+F 0 "R13" H 12700 8550 50  0000 C CNN
+F 1 "10kΩ" H 12700 8450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 12480 8500 50  0001 C CNN
+F 3 "~" H 12550 8500 50  0001 C CNN
+	1    12550 8500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12550 8050 12550 7950
+Wire Wire Line
+	12550 7950 11900 7950
+Wire Wire Line
+	12950 8350 12550 8350
+Connection ~ 12550 8350
+Wire Wire Line
+	12950 8550 12950 8700
+Wire Wire Line
+	12950 8700 13550 8700
+Wire Wire Line
+	13550 8700 13550 8450
+Text Notes 10700 7550 0    79   ~ 0
+7. LM358 Alimentação e proteção OP-AMP não usado
+Wire Wire Line
+	9400 6200 9850 6200
+$Comp
+L Device:R R24
+U 1 1 614293D2
+P 9850 7050
+F 0 "R24" H 10000 7100 50  0000 C CNN
+F 1 "330kΩ" H 10050 7000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9780 7050 50  0001 C CNN
+F 3 "~" H 9850 7050 50  0001 C CNN
+	1    9850 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R23
+U 1 1 6142FCC4
+P 9850 6700
+F 0 "R23" H 10000 6750 50  0000 C CNN
+F 1 "330kΩ" H 10050 6650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9780 6700 50  0001 C CNN
+F 3 "~" H 9850 6700 50  0001 C CNN
+	1    9850 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 7250 9850 7200
+Wire Wire Line
+	9850 6900 9850 6850
+$Comp
+L Device:R R22
+U 1 1 6144D7FD
+P 9200 7200
+F 0 "R22" H 9350 7250 50  0000 C CNN
+F 1 "220kΩ" H 9400 7150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 7200 50  0001 C CNN
+F 3 "~" H 9200 7200 50  0001 C CNN
+	1    9200 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R21
+U 1 1 6144D803
+P 9200 6850
+F 0 "R21" H 9350 6900 50  0000 C CNN
+F 1 "330kΩ" H 9400 6800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 6850 50  0001 C CNN
+F 3 "~" H 9200 6850 50  0001 C CNN
+	1    9200 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 7400 9200 7350
+Wire Wire Line
+	9200 7050 9200 7000
+$Comp
+L Device:R R20
+U 1 1 6145C404
+P 9200 6500
+F 0 "R20" H 9350 6550 50  0000 C CNN
+F 1 "330kΩ" H 9400 6450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 6500 50  0001 C CNN
+F 3 "~" H 9200 6500 50  0001 C CNN
+	1    9200 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 6700 9200 6650
+Connection ~ 9200 7400
+Wire Wire Line
+	9850 6550 9850 6200
+Connection ~ 9850 6200
+Wire Wire Line
+	9850 6200 9950 6200
+Wire Wire Line
+	9200 6350 9200 6200
+Wire Wire Line
+	9150 6200 9200 6200
+Connection ~ 9200 6200
+Wire Wire Line
+	9200 6200 9400 6200
+Wire Notes Line
+	10450 5100 10450 8550
+Wire Notes Line
+	4950 5100 4950 8550
+Text Notes 6550 8400 0    79   ~ 0
+10% VO ponto de medição com osciloscópio\nProbe osciloscópio em 10X e osciloscópio em 100X
 $EndSCHEMATC
