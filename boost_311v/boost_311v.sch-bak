@@ -18,7 +18,7 @@ Text Notes 6450 2450 0    79   ~ 0
 Text Notes 7000 1900 0    79   ~ 0
 Conversor CC-CC - Boost 24V para 311V - 0,3A
 Text Notes 10650 2400 0    79   ~ 0
-3. Comparador - Amplificação - PWM - duty 0 até 73%
+3. Comparador - Amplificação - PWM - duty 0 até 75%
 Wire Notes Line
 	5500 4600 5500 2550
 Wire Notes Line
@@ -322,7 +322,7 @@ $EndComp
 Wire Wire Line
 	12200 3200 12200 3000
 Text Notes 11100 4700 0    59   ~ 0
-O Duty é limitado em no máximo ≈ 73%\nImpedindo assim colocar a fonte em curto\n\nTensão dente de serra é em torno de 8.8V, zener 6,5V\n\nO transistor amplifica e inverte a saída do comparador
+O Duty é limitado em no máximo ≈ 75%\nImpedindo assim colocar a fonte em curto\n\nTensão dente de serra é em torno de 8.8V, zener 6,5V\n\nO transistor amplifica e inverte a saída do comparador
 Text Label 11350 3600 2    59   ~ 0
 V_cnt
 $Comp
@@ -1147,7 +1147,7 @@ L Device:D_Zener D7
 U 1 1 6138527C
 P 11800 3750
 F 0 "D7" V 11800 3950 50  0000 R CNN
-F 1 "Zener 6,5V" V 11700 4300 50  0000 R CNN
+F 1 "Zener 6,5V" V 11700 4250 50  0000 R CNN
 F 2 "" H 11800 3750 50  0001 C CNN
 F 3 "~" H 11800 3750 50  0001 C CNN
 	1    11800 3750
