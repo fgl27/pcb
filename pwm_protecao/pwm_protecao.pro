@@ -1,4 +1,4 @@
-update=seg 06 set 2021 17:06:01
+update=sex 10 set 2021 10:29:13
 version=1
 last_client=kicad
 [general]

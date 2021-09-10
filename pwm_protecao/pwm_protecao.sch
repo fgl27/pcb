@@ -24,8 +24,8 @@ F 3 "" H 5600 2550 50  0001 C CNN
 	1    5600 2550
 	1    0    0    -1  
 $EndComp
-Text Notes 3550 950  0    79   ~ 0
-1. PWMm - F ≈ 19kHz - Duty 10 a 100%
+Text Notes 4100 950  0    79   ~ 0
+1. PWMm - F ≈ 19kHz - Duty 18 a 100%
 Text Notes 3850 650  0    79   ~ 0
 Módulo de acionamento PWM com proteções para MOSFETs
 $Comp
@@ -52,16 +52,6 @@ F 3 "" H 4100 2450 50  0001 C CNN
 	1    4100 2450
 	1    0    0    -1  
 $EndComp
-Wire Notes Line
-	4050 6000 4050 3550
-Wire Notes Line
-	4050 3550 1550 3550
-Wire Notes Line
-	1550 3550 1550 6000
-Wire Notes Line
-	1550 6000 4050 6000
-Text Notes 1600 3400 0    79   ~ 0
-3.1 Proteções e acionamento MOSFET
 Wire Notes Line
 	3500 3050 3500 1000
 Wire Notes Line
@@ -187,331 +177,78 @@ $EndComp
 Wire Wire Line
 	5100 2500 5100 2350
 Connection ~ 4500 1950
-$Comp
-L Transistor_BJT:2N3904 Q3
-U 1 1 6150CEE8
-P 2850 4550
-F 0 "Q3" H 3040 4596 50  0000 L CNN
-F 1 "2N3904" H 3040 4505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3050 4475 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 2850 4550 50  0001 L CNN
-	1    2850 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:2N3906 Q4
-U 1 1 6150C35E
-P 2850 4950
-F 0 "Q4" H 3040 4904 50  0000 L CNN
-F 1 "2N3906" H 3040 4995 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3050 4875 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" H 2850 4950 50  0001 L CNN
-	1    2850 4950
-	1    0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR014
-U 1 1 6151BEFE
-P 2950 5150
-F 0 "#PWR014" H 2950 4900 50  0001 C CNN
-F 1 "GND" H 2955 4977 50  0000 C CNN
-F 2 "" H 2950 5150 50  0001 C CNN
-F 3 "" H 2950 5150 50  0001 C CNN
-	1    2950 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR013
-U 1 1 615273D8
-P 2950 4350
-F 0 "#PWR013" H 2950 4200 50  0001 C CNN
-F 1 "+12V" H 2965 4523 50  0000 C CNN
-F 2 "" H 2950 4350 50  0001 C CNN
-F 3 "" H 2950 4350 50  0001 C CNN
-	1    2950 4350
-	1    0    0    -1  
-$EndComp
-Text Label 3200 4750 0    59   ~ 0
-MOS_Gate
-Wire Wire Line
-	2950 4750 3200 4750
-Connection ~ 2950 4750
 Wire Notes Line
-	9800 6000 9800 3550
-Wire Notes Line
-	9800 3550 7300 3550
-Wire Notes Line
-	7300 3550 7300 6000
-Wire Notes Line
-	7300 6000 9800 6000
-Text Notes 7350 3400 0    79   ~ 0
-4. MOSFET - para demonstrar funcionamento
+	6000 3450 6000 5900
+Text Notes 5650 3300 0    79   ~ 0
+3. MOSFET - para demonstrar funcionamento
 $Comp
 L Transistor_FET:IRLZ44N Q5
 U 1 1 6154A6E4
-P 8500 4450
-F 0 "Q5" H 8704 4496 50  0000 L CNN
-F 1 "IRLZ44N" H 8704 4405 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8750 4375 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf" H 8500 4450 50  0001 L CNN
-	1    8500 4450
+P 7000 5000
+F 0 "Q5" H 7204 5046 50  0000 L CNN
+F 1 "IRLZ44N" H 7204 4955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7250 4925 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf" H 7000 5000 50  0001 L CNN
+	1    7000 5000
 	1    0    0    -1  
 $EndComp
-Text Label 8000 4450 2    59   ~ 0
+Text Label 6800 5000 2    59   ~ 0
 MOS_Gate
 $Comp
 L power:+12V #PWR015
 U 1 1 61553C13
-P 8600 4250
-F 0 "#PWR015" H 8600 4100 50  0001 C CNN
-F 1 "+12V" H 8615 4423 50  0000 C CNN
-F 2 "" H 8600 4250 50  0001 C CNN
-F 3 "" H 8600 4250 50  0001 C CNN
-	1    8600 4250
+P 7100 4000
+F 0 "#PWR015" H 7100 3850 50  0001 C CNN
+F 1 "+12V" H 7115 4173 50  0000 C CNN
+F 2 "" H 7100 4000 50  0001 C CNN
+F 3 "" H 7100 4000 50  0001 C CNN
+	1    7100 4000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:LED D1
 U 1 1 61556E08
-P 8600 4800
-F 0 "D1" V 8639 4682 50  0000 R CNN
-F 1 "LED" V 8548 4682 50  0000 R CNN
-F 2 "" H 8600 4800 50  0001 C CNN
-F 3 "~" H 8600 4800 50  0001 C CNN
-	1    8600 4800
+P 7100 4200
+F 0 "D1" V 7139 4082 50  0000 R CNN
+F 1 "LED" V 7048 4082 50  0000 R CNN
+F 2 "" H 7100 4200 50  0001 C CNN
+F 3 "~" H 7100 4200 50  0001 C CNN
+	1    7100 4200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	8600 5050 8600 4950
+	7100 4450 7100 4350
 $Comp
 L Device:R R3
 U 1 1 61558ECD
-P 8600 5200
-F 0 "R3" H 8750 5250 50  0000 C CNN
-F 1 "330Ω" H 8750 5150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8530 5200 50  0001 C CNN
-F 3 "~" H 8600 5200 50  0001 C CNN
-	1    8600 5200
+P 7100 4600
+F 0 "R3" H 7250 4650 50  0000 C CNN
+F 1 "330Ω" H 7250 4550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7030 4600 50  0001 C CNN
+F 3 "~" H 7100 4600 50  0001 C CNN
+	1    7100 4600
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR016
 U 1 1 6155B3C3
-P 8600 5350
-F 0 "#PWR016" H 8600 5100 50  0001 C CNN
-F 1 "GND" H 8605 5177 50  0000 C CNN
-F 2 "" H 8600 5350 50  0001 C CNN
-F 3 "" H 8600 5350 50  0001 C CNN
-	1    8600 5350
+P 7100 5250
+F 0 "#PWR016" H 7100 5000 50  0001 C CNN
+F 1 "GND" H 7105 5077 50  0000 C CNN
+F 2 "" H 7100 5250 50  0001 C CNN
+F 3 "" H 7100 5250 50  0001 C CNN
+	1    7100 5250
 	1    0    0    -1  
 $EndComp
-Text Notes 950  7100 0    79   ~ 0
-Caso a frequência necessária, impeça o uso do optocoupler, use o isolamento com diodo\nuse diodos com tensão reversa de pelo menos 100V
-Wire Wire Line
-	4900 4550 4900 4450
-Wire Wire Line
-	4900 4150 4900 4050
-Wire Wire Line
-	4900 4750 4900 5000
-$Comp
-L power:GND #PWR017
-U 1 1 6137476E
-P 4900 5000
-F 0 "#PWR017" H 4900 4750 50  0001 C CNN
-F 1 "GND" H 4905 4827 50  0000 C CNN
-F 2 "" H 4900 5000 50  0001 C CNN
-F 3 "" H 4900 5000 50  0001 C CNN
-	1    4900 5000
-	1    0    0    -1  
-$EndComp
-Text Label 4900 4050 0    59   ~ 0
-PWM
-$Comp
-L Device:R R6
-U 1 1 61374775
-P 5700 5000
-F 0 "R6" H 5800 4950 50  0000 C CNN
-F 1 "470Ω" H 5850 5050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5630 5000 50  0001 C CNN
-F 3 "~" H 5700 5000 50  0001 C CNN
-	1    5700 5000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5500 4650 5600 4650
-Wire Notes Line
-	6950 6000 6950 3550
-Wire Notes Line
-	6950 3550 4450 3550
-Wire Notes Line
-	4450 3550 4450 6000
-Wire Notes Line
-	4450 6000 6950 6000
-Text Notes 4500 3400 0    79   ~ 0
-3.2 Proteções e acionamento MOSFET
-Wire Wire Line
-	5600 4650 5600 4400
-$Comp
-L Isolator:4N25 U1
-U 1 1 61374783
-P 5200 4650
-F 0 "U1" H 5200 4975 50  0000 C CNN
-F 1 "4N25" H 5200 4884 50  0000 C CNN
-F 2 "Package_DIP:DIP-6_W7.62mm" H 5000 4450 50  0001 L CIN
-F 3 "https://www.vishay.com/docs/83725/4n25.pdf" H 5200 4650 50  0001 L CNN
-	1    5200 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 61374789
-P 4900 4300
-F 0 "R5" H 5050 4350 50  0000 C CNN
-F 1 "470Ω" H 5050 4250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4830 4300 50  0001 C CNN
-F 3 "~" H 4900 4300 50  0001 C CNN
-	1    4900 4300
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:2N3904 Q6
-U 1 1 6137478F
-P 6100 4550
-F 0 "Q6" H 6290 4596 50  0000 L CNN
-F 1 "2N3904" H 6290 4505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6300 4475 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 6100 4550 50  0001 L CNN
-	1    6100 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:2N3906 Q7
-U 1 1 61374795
-P 6100 4950
-F 0 "Q7" H 6290 4904 50  0000 L CNN
-F 1 "2N3906" H 6290 4995 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6300 4875 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" H 6100 4950 50  0001 L CNN
-	1    6100 4950
-	1    0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR023
-U 1 1 6137479B
-P 6200 5150
-F 0 "#PWR023" H 6200 4900 50  0001 C CNN
-F 1 "GND" H 6205 4977 50  0000 C CNN
-F 2 "" H 6200 5150 50  0001 C CNN
-F 3 "" H 6200 5150 50  0001 C CNN
-	1    6200 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR019
-U 1 1 613747A1
-P 6200 4350
-F 0 "#PWR019" H 6200 4200 50  0001 C CNN
-F 1 "+12V" H 6215 4523 50  0000 C CNN
-F 2 "" H 6200 4350 50  0001 C CNN
-F 3 "" H 6200 4350 50  0001 C CNN
-	1    6200 4350
-	1    0    0    -1  
-$EndComp
-Text Label 6450 4750 0    59   ~ 0
-MOS_Gate
-Wire Wire Line
-	6200 4750 6450 4750
-Connection ~ 6200 4750
-$Comp
-L power:+12V #PWR018
-U 1 1 613747AD
-P 5600 4400
-F 0 "#PWR018" H 5600 4250 50  0001 C CNN
-F 1 "+12V" H 5615 4573 50  0000 C CNN
-F 2 "" H 5600 4400 50  0001 C CNN
-F 3 "" H 5600 4400 50  0001 C CNN
-	1    5600 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2650 4550 2650 4750
-$Comp
-L Device:R R4
-U 1 1 6137F49B
-P 2500 5000
-F 0 "R4" H 2300 4950 50  0000 C CNN
-F 1 "10kΩ" H 2300 5050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2430 5000 50  0001 C CNN
-F 3 "~" H 2500 5000 50  0001 C CNN
-	1    2500 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR012
-U 1 1 6137F4A1
-P 2500 5150
-F 0 "#PWR012" H 2500 4900 50  0001 C CNN
-F 1 "GND" H 2505 4977 50  0000 C CNN
-F 2 "" H 2500 5150 50  0001 C CNN
-F 3 "" H 2500 5150 50  0001 C CNN
-	1    2500 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4007 D2
-U 1 1 6138DCD7
-P 2200 4750
-F 0 "D2" H 2200 4533 50  0000 C CNN
-F 1 "1N4007" H 2200 4624 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2200 4575 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2200 4750 50  0001 C CNN
-	1    2200 4750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2350 4750 2500 4750
-Connection ~ 2650 4750
-Wire Wire Line
-	2650 4750 2650 4950
-Wire Wire Line
-	2500 4850 2500 4750
-Connection ~ 2500 4750
-Wire Wire Line
-	2500 4750 2650 4750
-Text Label 2050 4750 2    59   ~ 0
-PWM
-Wire Wire Line
-	5900 4550 5900 4750
-$Comp
-L power:GND #PWR024
-U 1 1 613A8264
-P 5700 5150
-F 0 "#PWR024" H 5700 4900 50  0001 C CNN
-F 1 "GND" H 5705 4977 50  0000 C CNN
-F 2 "" H 5700 5150 50  0001 C CNN
-F 3 "" H 5700 5150 50  0001 C CNN
-	1    5700 5150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5500 4750 5700 4750
-Connection ~ 5900 4750
-Wire Wire Line
-	5900 4750 5900 4950
-Wire Wire Line
-	5700 4850 5700 4750
-Connection ~ 5700 4750
-Wire Wire Line
-	5700 4750 5900 4750
 $Comp
 L Device:R R7
 U 1 1 613BAE28
-P 8150 4450
-F 0 "R7" V 8250 4450 50  0000 C CNN
-F 1 "47Ω" V 8050 4450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8080 4450 50  0001 C CNN
-F 3 "~" H 8150 4450 50  0001 C CNN
-	1    8150 4450
+P 4250 4750
+F 0 "R7" V 4350 4750 50  0000 C CNN
+F 1 "47Ω" V 4150 4750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4180 4750 50  0001 C CNN
+F 3 "~" H 4250 4750 50  0001 C CNN
+	1    4250 4750
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -578,4 +315,189 @@ Text Notes 3850 3000 0    79   ~ 0
 Ajustando o controle / potenciômetro se ajusta o Duty.
 Text Notes 7300 6350 0    79   ~ 0
 Felipe Leon - 2021
+Wire Wire Line
+	7100 4800 7100 4750
+Wire Wire Line
+	7100 5250 7100 5200
+Wire Wire Line
+	7100 4000 7100 4050
+Wire Notes Line
+	6000 5900 8100 5900
+Wire Notes Line
+	6000 3450 8100 3450
+Wire Notes Line
+	8100 3450 8100 5900
+Wire Wire Line
+	2000 5200 2000 5100
+Wire Wire Line
+	2000 4200 2000 4600
+Connection ~ 2000 4200
+Wire Wire Line
+	2000 4200 3200 4200
+Wire Wire Line
+	2900 4750 2750 4750
+Wire Wire Line
+	3350 5200 3850 5200
+Connection ~ 3350 5200
+Wire Wire Line
+	3350 5150 3350 5200
+Wire Wire Line
+	3350 4750 3550 4750
+Connection ~ 3350 4750
+Wire Wire Line
+	3350 4850 3350 4750
+Wire Wire Line
+	3550 4750 3550 4950
+Connection ~ 3550 4750
+Wire Wire Line
+	3200 4750 3350 4750
+Wire Wire Line
+	3550 4550 3550 4750
+$Comp
+L Device:R R1
+U 1 1 614A09B8
+P 3050 4750
+F 0 "R1" V 3300 4750 50  0000 C CNN
+F 1 "1kΩ" V 3200 4750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2980 4750 50  0001 C CNN
+F 3 "~" H 3050 4750 50  0001 C CNN
+	1    3050 4750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3850 4350 3850 4200
+Wire Wire Line
+	3700 4200 3850 4200
+$Comp
+L pspice:INDUCTOR L1
+U 1 1 61455D72
+P 3450 4200
+F 0 "L1" H 3450 4415 50  0000 C CNN
+F 1 "1,5µH" H 3450 4324 50  0000 C CNN
+F 2 "" H 3450 4200 50  0001 C CNN
+F 3 "~" H 3450 4200 50  0001 C CNN
+	1    3450 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 5200 3850 5150
+Connection ~ 3850 5200
+Wire Wire Line
+	3850 5250 3850 5200
+Wire Wire Line
+	5100 5000 5100 5200
+$Comp
+L power:GND #PWR02
+U 1 1 6145002A
+P 3850 5250
+F 0 "#PWR02" H 3850 5000 50  0001 C CNN
+F 1 "GND" H 3855 5077 50  0000 C CNN
+F 2 "" H 3850 5250 50  0001 C CNN
+F 3 "" H 3850 5250 50  0001 C CNN
+	1    3850 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:CAP C3
+U 1 1 61450024
+P 2000 4850
+F 0 "C3" H 2100 5000 50  0000 L CNN
+F 1 "100nF" H 2100 4750 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 2000 4850 50  0001 C CNN
+F 3 "~" H 2000 4850 50  0001 C CNN
+	1    2000 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4200 5100 4500
+$Comp
+L pspice:CAP C1
+U 1 1 613D3A53
+P 5100 4750
+F 0 "C1" H 5200 4900 50  0000 L CNN
+F 1 "100nF" H 5200 4650 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 5100 4750 50  0001 C CNN
+F 3 "~" H 5100 4750 50  0001 C CNN
+	1    5100 4750
+	1    0    0    -1  
+$EndComp
+Text Label 4400 4750 0    59   ~ 0
+MOS_Gate
+Text Label 2450 4750 2    59   ~ 0
+PWM
+$Comp
+L Diode:1N4007 D2
+U 1 1 6138DCD7
+P 2600 4750
+F 0 "D2" H 2600 4533 50  0000 C CNN
+F 1 "1N4007" H 2600 4624 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2600 4575 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2600 4750 50  0001 C CNN
+	1    2600 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 6137F49B
+P 3350 5000
+F 0 "R4" H 3150 4950 50  0000 C CNN
+F 1 "10kΩ" H 3150 5050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3280 5000 50  0001 C CNN
+F 3 "~" H 3350 5000 50  0001 C CNN
+	1    3350 5000
+	1    0    0    -1  
+$EndComp
+Connection ~ 3850 4750
+Wire Wire Line
+	3850 4750 4100 4750
+$Comp
+L power:+12V #PWR013
+U 1 1 615273D8
+P 2000 4200
+F 0 "#PWR013" H 2000 4050 50  0001 C CNN
+F 1 "+12V" H 2015 4373 50  0000 C CNN
+F 2 "" H 2000 4200 50  0001 C CNN
+F 3 "" H 2000 4200 50  0001 C CNN
+	1    2000 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3906 Q4
+U 1 1 6150C35E
+P 3750 4950
+F 0 "Q4" H 3940 4904 50  0000 L CNN
+F 1 "2N3906" H 3940 4995 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3950 4875 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" H 3750 4950 50  0001 L CNN
+	1    3750 4950
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q3
+U 1 1 6150CEE8
+P 3750 4550
+F 0 "Q3" H 3940 4596 50  0000 L CNN
+F 1 "2N3904" H 3940 4505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3950 4475 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 3750 4550 50  0001 L CNN
+	1    3750 4550
+	1    0    0    -1  
+$EndComp
+Text Notes 2300 3400 0    79   ~ 0
+2 Proteções e acionamento MOSFET\nBaseado no Bipolar Totem-Pole Driver
+Wire Notes Line
+	5500 5900 5500 3450
+Wire Wire Line
+	3850 5200 5100 5200
+Wire Wire Line
+	3850 4200 5100 4200
+Connection ~ 3850 4200
+Wire Notes Line
+	1700 3450 1700 5900
+Wire Notes Line
+	1700 5900 5500 5900
+Wire Notes Line
+	1700 3450 5500 3450
+Wire Wire Line
+	2000 5200 3350 5200
 $EndSCHEMATC
