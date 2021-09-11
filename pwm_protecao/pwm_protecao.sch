@@ -328,17 +328,9 @@ Wire Notes Line
 Wire Notes Line
 	8100 3450 8100 5900
 Wire Wire Line
-	2000 5200 2000 5100
-Wire Wire Line
-	2000 4200 2000 4600
-Connection ~ 2000 4200
-Wire Wire Line
-	2000 4200 3200 4200
-Wire Wire Line
 	2900 4750 2750 4750
 Wire Wire Line
 	3350 5200 3850 5200
-Connection ~ 3350 5200
 Wire Wire Line
 	3350 5150 3350 5200
 Wire Wire Line
@@ -367,19 +359,6 @@ $EndComp
 Wire Wire Line
 	3850 4350 3850 4200
 Wire Wire Line
-	3700 4200 3850 4200
-$Comp
-L pspice:INDUCTOR L1
-U 1 1 61455D72
-P 3450 4200
-F 0 "L1" H 3450 4415 50  0000 C CNN
-F 1 "1,5µH" H 3450 4324 50  0000 C CNN
-F 2 "" H 3450 4200 50  0001 C CNN
-F 3 "~" H 3450 4200 50  0001 C CNN
-	1    3450 4200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	3850 5200 3850 5150
 Connection ~ 3850 5200
 Wire Wire Line
@@ -397,17 +376,6 @@ F 3 "" H 3850 5250 50  0001 C CNN
 	1    3850 5250
 	1    0    0    -1  
 $EndComp
-$Comp
-L pspice:CAP C3
-U 1 1 61450024
-P 2000 4850
-F 0 "C3" H 2100 5000 50  0000 L CNN
-F 1 "100nF" H 2100 4750 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 2000 4850 50  0001 C CNN
-F 3 "~" H 2000 4850 50  0001 C CNN
-	1    2000 4850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5100 4200 5100 4500
 $Comp
@@ -423,19 +391,8 @@ F 3 "~" H 5100 4750 50  0001 C CNN
 $EndComp
 Text Label 4400 4750 0    59   ~ 0
 MOS_Gate
-Text Label 2450 4750 2    59   ~ 0
+Text Label 2750 4750 2    59   ~ 0
 PWM
-$Comp
-L Diode:1N4007 D2
-U 1 1 6138DCD7
-P 2600 4750
-F 0 "D2" H 2600 4533 50  0000 C CNN
-F 1 "1N4007" H 2600 4624 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2600 4575 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2600 4750 50  0001 C CNN
-	1    2600 4750
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:R R4
 U 1 1 6137F49B
@@ -453,12 +410,12 @@ Wire Wire Line
 $Comp
 L power:+12V #PWR013
 U 1 1 615273D8
-P 2000 4200
-F 0 "#PWR013" H 2000 4050 50  0001 C CNN
-F 1 "+12V" H 2015 4373 50  0000 C CNN
-F 2 "" H 2000 4200 50  0001 C CNN
-F 3 "" H 2000 4200 50  0001 C CNN
-	1    2000 4200
+P 5100 4200
+F 0 "#PWR013" H 5100 4050 50  0001 C CNN
+F 1 "+12V" H 5115 4373 50  0000 C CNN
+F 2 "" H 5100 4200 50  0001 C CNN
+F 3 "" H 5100 4200 50  0001 C CNN
+	1    5100 4200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -491,13 +448,11 @@ Wire Wire Line
 	3850 5200 5100 5200
 Wire Wire Line
 	3850 4200 5100 4200
-Connection ~ 3850 4200
 Wire Notes Line
 	1700 3450 1700 5900
 Wire Notes Line
 	1700 5900 5500 5900
 Wire Notes Line
 	1700 3450 5500 3450
-Wire Wire Line
-	2000 5200 3350 5200
+Connection ~ 5100 4200
 $EndSCHEMATC
