@@ -261,8 +261,8 @@ F 3 "~" H 10250 6050 50  0001 C CNN
 	1    10250 6050
 	0    -1   -1   0   
 $EndComp
-Text Notes 9100 6950 0    79   ~ 0
-                   Tensão máxima\nMOSFET, DIODOS, CAPACITORES e RESISTORES de 1/4 é 200V !!!\nCOrrente de pico Mosfet ≈ 5A
+Text Notes 8900 7450 0    69   ~ 0
+                   Tensão máxima\nMOSFET, DIODOS, CAPACITORES e RESISTORES de 1/4 é 200V !!!\n\nCorrente de média Mosfet ≈ 5A\nCorrente de pico   Mosfet ≈ 25A\n\nCorrente de média Diodos = Io ≈ 0,3A se Ro = 1kΩ\nCorrente de pico   Diodos ≈ 14A
 Text Notes 13950 5150 0    49   ~ 0
 Carga Máxima 0,3A\n1kΩ quando VO = 311V
 Text Notes 10600 4200 0    79   ~ 0
@@ -556,7 +556,7 @@ Wire Wire Line
 Connection ~ 14050 6650
 Wire Notes Line
 	8700 4350 8700 7800
-Text Notes 10750 7650 0    79   ~ 0
+Text Notes 11150 7700 0    69   ~ 0
 10% VO ponto de medição com osciloscópio\nProbe osciloscópio em 10X e osciloscópio em 100X\nAjustando o trimpot  para obter perfeito 10%
 $Comp
 L power:+12V #PWR02

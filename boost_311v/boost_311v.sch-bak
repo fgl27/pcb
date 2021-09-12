@@ -18,7 +18,7 @@ Text Notes 4950 1400 0    79   ~ 0
 Text Notes 6850 900  0    79   ~ 0
 Conversor CC-CC - Boost 24V para 311V - 0,3A
 Text Notes 8550 1350 0    79   ~ 0
-2. Comparador - Amplificação - PWM - duty 0 até 75%
+2. Comparador - Amplificação - PWM - duty 0 até ≈ 75%
 Text Label 10100 2400 2    59   ~ 0
 F_Serra
 Text Label 11450 2300 0    59   ~ 0
@@ -261,8 +261,8 @@ F 3 "~" H 10250 6050 50  0001 C CNN
 	1    10250 6050
 	0    -1   -1   0   
 $EndComp
-Text Notes 9100 6950 0    79   ~ 0
-                   Tensão máxima\nMOSFET, DIODOS, CAPACITORES e RESISTORES de 1/4 é 200V !!!
+Text Notes 9100 7200 0    79   ~ 0
+                   Tensão máxima\nMOSFET, DIODOS, CAPACITORES e RESISTORES de 1/4 é 200V !!!\nCorrente de média Mosfet ≈ 5A\nCorrente de pico Mosfet ≈ 20A\nCorrente de média Diodos = IO ≈ 0,3A se RO = 1000kΩ
 Text Notes 13950 5150 0    49   ~ 0
 Carga Máxima 0,3A\n1kΩ quando VO = 311V
 Text Notes 10600 4200 0    79   ~ 0
@@ -1265,7 +1265,7 @@ Text Notes 2250 9200 0    98   ~ 0
 GND1 pertence a fonte de 12V\n\nGND2 pertence a fonte de 24V\n\nGND1 e GND2 não tem conexão física\n\nO GND2 do Estagio 4. Boost, preferencialmente deve estar a uma distância do\nGND2 do estagio 3, para evitar ruídos gerados pela corrente alta do boost
 Text Notes 2800 7550 0    59   ~ 0
 O estagio de amplificação\nFaz com que o sinal da saída do opto\nfique com valor de tensão de 12V\ne mais definido/quadrado possível
-Text Notes 5000 7550 0    59   ~ 0
+Text Notes 4950 7550 0    59   ~ 0
 O Mosfet driver\nFaz com que o mosfet\nligue e desligue\no mais rápido possível
 Text Notes 6400 7550 0    59   ~ 0
 Tensão máxima de gate ±20V!\nAssim para não usar uma terceira fonte\nse usa um regulador de 12V na fonte\ndo boost
