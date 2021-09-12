@@ -262,7 +262,7 @@ F 3 "~" H 10250 6050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Notes 8900 7450 0    69   ~ 0
-                   Tensão máxima\nMOSFET, DIODOS, CAPACITORES e RESISTORES de 1/4 é 200V !!!\n\nCorrente de média Mosfet ≈ 5A\nCorrente de pico   Mosfet ≈ 25A\n\nCorrente de média Diodos = Io ≈ 0,3A se Ro = 1kΩ\nCorrente de pico   Diodos ≈ 14A
+                   Tensão máxima\nMOSFET, DIODOS, CAPACITORES e RESISTORES de 1/4 é 200V !!!\n\nCorrente média   Mosfet ≈ 5A\nCorrente de pico Mosfet ≈ 25A\n\nCorrente média   Diodos = Io ≈ 0,3A se Ro = 1kΩ\nCorrente de pico Diodos ≈ 14A
 Text Notes 13950 5150 0    49   ~ 0
 Carga Máxima 0,3A\n1kΩ quando VO = 311V
 Text Notes 10600 4200 0    79   ~ 0
