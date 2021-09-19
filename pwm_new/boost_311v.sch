@@ -1,0 +1,686 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 15780 9858
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 1300 2000 0    79   ~ 0
+1. Onda dente de serra, F ≈ 19 kHz - Duty 18 até 100%
+Wire Wire Line
+	2150 3350 1850 3350
+$Comp
+L pspice:CAP C4
+U 1 1 5DA5F4B2
+P 1850 3600
+F 0 "C4" H 1550 3700 50  0000 L CNN
+F 1 "10nF" H 1500 3600 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 1850 3600 50  0001 C CNN
+F 3 "~" H 1850 3600 50  0001 C CNN
+	1    1850 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Timer:NE555 U5
+U 1 1 5D10D5C0
+P 2650 3350
+F 0 "U5" H 2900 3700 50  0000 C CNN
+F 1 "NE555" H 2650 3350 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 2650 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 2650 3350 50  0001 C CNN
+	1    2650 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5DAC54BE
+P 4400 3050
+F 0 "R8" H 4550 3100 50  0000 C CNN
+F 1 "10KΩ" H 4550 3000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4330 3050 50  0001 C CNN
+F 3 "~" H 4400 3050 50  0001 C CNN
+	1    4400 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 3250 3550
+Wire Wire Line
+	3150 3550 3250 3550
+$Comp
+L pspice:CAP C5
+U 1 1 5DA905D3
+P 1000 3750
+F 0 "C5" H 1100 3900 50  0000 L CNN
+F 1 "571pF" H 1100 3650 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 1000 3750 50  0001 C CNN
+F 3 "~" H 1000 3750 50  0001 C CNN
+	1    1000 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2650 2650 2950
+Connection ~ 2650 2650
+Wire Wire Line
+	2750 2650 2650 2650
+Wire Wire Line
+	2650 2500 2650 2650
+$Comp
+L pspice:CAP C8
+U 1 1 5DA2F290
+P 3000 2650
+F 0 "C8" V 3300 2600 50  0000 L CNN
+F 1 "100nF" V 3200 2550 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 3000 2650 50  0001 C CNN
+F 3 "~" H 3000 2650 50  0001 C CNN
+	1    3000 2650
+	0    -1   -1   0   
+$EndComp
+Wire Notes Line
+	800  2100 5100 2100
+Text Notes 13250 100  0    79   ~ 0
+3. Isolação PWM, acionamento e proteção MOSFET
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 6137B63B
+P 11700 4350
+F 0 "J3" H 11700 4150 50  0001 C CNN
+F 1 "Vin_boost" H 11700 4100 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 11700 4350 50  0001 C CNN
+F 3 "~" H 11700 4350 50  0001 C CNN
+	1    11700 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11900 4550 11900 4350
+Wire Wire Line
+	3600 3550 3600 3350
+Wire Wire Line
+	2100 3800 2100 3550
+Wire Wire Line
+	2100 3550 2150 3550
+Wire Wire Line
+	1400 3150 2150 3150
+Wire Wire Line
+	1400 4100 3250 4100
+Text Notes 2300 2200 0    59   ~ 0
+Ajustando o trimpot se a ajusta a frequência de operação
+Wire Notes Line
+	5100 2100 5100 4300
+Wire Notes Line
+	800  2100 800  4300
+Wire Notes Line
+	5100 4300 800  4300
+$Comp
+L Device:R_POT POT1
+U 1 1 613D790D
+P 4350 3900
+F 0 "POT1" V 4150 4000 50  0000 R CNN
+F 1 "100kΩ" V 4250 4050 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK163_Single_Horizontal" H 4350 3900 50  0001 C CNN
+F 3 "~" H 4350 3900 50  0001 C CNN
+	1    4350 3900
+	0    1    1    0   
+$EndComp
+Text Notes 11200 8500 0    79   ~ 0
+Felipe Leon - 2021
+$Comp
+L power:+12V #PWR02
+U 1 1 61419DEF
+P 2650 2500
+F 0 "#PWR02" H 2650 2350 50  0001 C CNN
+F 1 "+12V" H 2665 2673 50  0000 C CNN
+F 2 "" H 2650 2500 50  0001 C CNN
+F 3 "" H 2650 2500 50  0001 C CNN
+	1    2650 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR01
+U 1 1 61455F15
+P 2100 3800
+F 0 "#PWR01" H 2100 3650 50  0001 C CNN
+F 1 "+12V" V 2100 3900 50  0000 L CNN
+F 2 "" H 2100 3800 50  0001 C CNN
+F 3 "" H 2100 3800 50  0001 C CNN
+	1    2100 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Isolator:4N25 U3
+U 1 1 61579FF5
+P 6200 4000
+F 0 "U3" H 6200 4325 50  0000 C CNN
+F 1 "4N25" H 6200 4234 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm" H 6000 3800 50  0001 L CIN
+F 3 "https://www.vishay.com/docs/83725/4n25.pdf" H 6200 4000 50  0001 L CNN
+	1    6200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:PN2222A Q3
+U 1 1 615A18D0
+P 8050 4100
+F 0 "Q3" H 8240 4146 50  0000 L CNN
+F 1 "PN2222A" H 8240 4055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Wide" H 8250 4025 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF" H 8050 4100 50  0001 L CNN
+	1    8050 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 615A18DC
+P 8150 3750
+F 0 "R17" H 8300 3700 50  0000 C CNN
+F 1 "10kΩ" H 8300 3800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8080 3750 50  0001 C CNN
+F 3 "~" H 8150 3750 50  0001 C CNN
+	1    8150 3750
+	-1   0    0    1   
+$EndComp
+Connection ~ 8150 3900
+$Comp
+L Device:R R5
+U 1 1 61654262
+P 5900 4350
+F 0 "R5" H 6050 4300 50  0000 C CNN
+F 1 "470Ω" H 6050 4400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5830 4350 50  0001 C CNN
+F 3 "~" H 5900 4350 50  0001 C CNN
+	1    5900 4350
+	-1   0    0    1   
+$EndComp
+Text Label 5750 3900 2    59   ~ 0
+PWM
+Wire Wire Line
+	5900 4200 5900 4100
+Wire Wire Line
+	5900 3900 5750 3900
+$Comp
+L power:GND1 #PWR03
+U 1 1 616A998A
+P 5900 4550
+F 0 "#PWR03" H 5900 4300 50  0001 C CNN
+F 1 "GND1" H 5905 4377 50  0000 C CNN
+F 2 "" H 5900 4550 50  0001 C CNN
+F 3 "" H 5900 4550 50  0001 C CNN
+	1    5900 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND2 #PWR04
+U 1 1 616ABA6C
+P 8150 4550
+F 0 "#PWR04" H 8150 4300 50  0001 C CNN
+F 1 "GND2" H 8155 4377 50  0000 C CNN
+F 2 "" H 8150 4550 50  0001 C CNN
+F 3 "" H 8150 4550 50  0001 C CNN
+	1    8150 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4550 5900 4500
+$Comp
+L power:GND1 #PWR010
+U 1 1 6172E663
+P 1000 4000
+F 0 "#PWR010" H 1000 3750 50  0001 C CNN
+F 1 "GND1" H 1005 3827 50  0000 C CNN
+F 2 "" H 1000 4000 50  0001 C CNN
+F 3 "" H 1000 4000 50  0001 C CNN
+	1    1000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND1 #PWR09
+U 1 1 61735A82
+P 3250 2650
+F 0 "#PWR09" H 3250 2400 50  0001 C CNN
+F 1 "GND1" H 3255 2477 50  0000 C CNN
+F 2 "" H 3250 2650 50  0001 C CNN
+F 3 "" H 3250 2650 50  0001 C CNN
+	1    3250 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND1 #PWR08
+U 1 1 617425AC
+P 2650 3750
+F 0 "#PWR08" H 2650 3500 50  0001 C CNN
+F 1 "GND1" H 2655 3577 50  0000 C CNN
+F 2 "" H 2650 3750 50  0001 C CNN
+F 3 "" H 2650 3750 50  0001 C CNN
+	1    2650 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND1 #PWR05
+U 1 1 61748A04
+P 1850 3850
+F 0 "#PWR05" H 1850 3600 50  0001 C CNN
+F 1 "GND1" H 1855 3677 50  0000 C CNN
+F 2 "" H 1850 3850 50  0001 C CNN
+F 3 "" H 1850 3850 50  0001 C CNN
+	1    1850 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3550 3250 4100
+Wire Wire Line
+	1400 3150 1400 4100
+$Comp
+L Device:R R3
+U 1 1 617723BC
+P 6650 4350
+F 0 "R3" H 6800 4300 50  0000 C CNN
+F 1 "330Ω" H 6800 4400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6580 4350 50  0001 C CNN
+F 3 "~" H 6650 4350 50  0001 C CNN
+	1    6650 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6650 4200 6650 4100
+Wire Wire Line
+	6650 4550 6650 4500
+Wire Wire Line
+	6650 4100 6500 4100
+Wire Wire Line
+	6650 4000 6500 4000
+$Comp
+L Transistor_BJT:PN2222A Q4
+U 1 1 617D28B2
+P 8700 3900
+F 0 "Q4" H 8890 3946 50  0000 L CNN
+F 1 "PN2222A" H 8890 3855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Wide" H 8900 3825 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF" H 8700 3900 50  0001 L CNN
+	1    8700 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 617D28B8
+P 8800 3550
+F 0 "R4" H 8950 3500 50  0000 C CNN
+F 1 "1kΩ" H 8950 3600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8730 3550 50  0001 C CNN
+F 3 "~" H 8800 3550 50  0001 C CNN
+	1    8800 3550
+	-1   0    0    1   
+$EndComp
+Connection ~ 8800 3700
+Wire Wire Line
+	8150 3400 8150 3600
+Wire Wire Line
+	8150 4550 8150 4300
+Connection ~ 8150 4550
+Wire Wire Line
+	8150 3900 8500 3900
+Wire Wire Line
+	8800 4550 8800 4100
+Connection ~ 8800 3400
+$Comp
+L pspice:CAP C6
+U 1 1 618ADFD6
+P 10550 3900
+F 0 "C6" H 10650 4050 50  0000 L CNN
+F 1 "100nF" H 10650 3800 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 10550 3900 50  0001 C CNN
+F 3 "~" H 10550 3900 50  0001 C CNN
+	1    10550 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 4100 9400 3700
+Wire Wire Line
+	8800 3400 9700 3400
+Wire Wire Line
+	8800 3700 9400 3700
+Wire Wire Line
+	9700 3500 9700 3400
+Connection ~ 9700 3400
+Text Label 9900 3900 0    59   ~ 0
+MOS_Gate
+Wire Wire Line
+	10550 4150 10550 4550
+Wire Wire Line
+	8150 3400 8800 3400
+$Comp
+L pspice:DIODE D1
+U 1 1 61C36679
+P 4050 3550
+F 0 "D1" V 4100 3800 50  0000 C CNN
+F 1 "FR154" V 4000 3800 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4050 3550 50  0001 C CNN
+F 3 "~" H 4050 3550 50  0001 C CNN
+	1    4050 3550
+	0    -1   -1   0   
+$EndComp
+Text Notes 5850 3100 0    79   ~ 0
+Isolação do PWM\nE da fonte de 12V
+Text Notes 7600 3000 0    79   ~ 0
+Amplificador não inversor\nDe altíssimo ganho
+$Comp
+L pspice:CAP C16
+U 1 1 61D955B9
+P 7700 4100
+F 0 "C16" H 7800 4250 50  0000 L CNN
+F 1 "100nF" H 7800 4000 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm" H 7700 4100 50  0001 C CNN
+F 3 "~" H 7700 4100 50  0001 C CNN
+	1    7700 4100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 4550 8800 4550
+Wire Wire Line
+	7700 4350 7700 4550
+Wire Wire Line
+	7700 4550 8150 4550
+Wire Wire Line
+	7700 3850 7700 3400
+Wire Wire Line
+	7700 3400 8150 3400
+Connection ~ 8150 3400
+Text Notes 9350 3000 0    79   ~ 0
+Bipolar totem-pole driver\nMosfet driver
+Wire Notes Line
+	9300 5500 9300 2050
+Wire Notes Line
+	7300 5500 7300 2050
+Wire Notes Line
+	10950 5500 10950 2050
+Wire Wire Line
+	6650 4000 6650 3400
+$Comp
+L power:GND2 #PWR020
+U 1 1 61F1BF56
+P 6650 4550
+F 0 "#PWR020" H 6650 4300 50  0001 C CNN
+F 1 "GND2" H 6655 4377 50  0000 C CNN
+F 2 "" H 6650 4550 50  0001 C CNN
+F 3 "" H 6650 4550 50  0001 C CNN
+	1    6650 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND2 #PWR021
+U 1 1 61F35A1A
+P 10000 4550
+F 0 "#PWR021" H 10000 4300 50  0001 C CNN
+F 1 "GND2" H 10005 4377 50  0000 C CNN
+F 2 "" H 10000 4550 50  0001 C CNN
+F 3 "" H 10000 4550 50  0001 C CNN
+	1    10000 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 4550 10000 4550
+Text Notes 7450 5250 0    59   ~ 0
+O estagio de amplificação\nFaz com que o sinal da saída do opto\nfique com valor de tensão de 12V\ne mais definido/quadrado possível
+Text Notes 9600 5250 0    59   ~ 0
+O Mosfet driver\nFaz com que o mosfet\nligue e desligue\no mais rápido possível
+Wire Wire Line
+	9900 3900 9700 3900
+Wire Wire Line
+	10000 4550 10550 4550
+Connection ~ 10000 4550
+Wire Wire Line
+	10550 3650 10550 3400
+Wire Wire Line
+	9700 3400 10550 3400
+$Comp
+L Device:R R11
+U 1 1 62072FB6
+P 7000 4100
+F 0 "R11" V 7200 4100 50  0000 C CNN
+F 1 "10kΩ" V 7100 4100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6930 4100 50  0001 C CNN
+F 3 "~" H 7000 4100 50  0001 C CNN
+	1    7000 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7850 4100 7150 4100
+Wire Wire Line
+	6850 4100 6650 4100
+Connection ~ 6650 4100
+Wire Wire Line
+	6650 3400 7700 3400
+Connection ~ 7700 3400
+Wire Notes Line
+	5400 2050 5400 5500
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 614916C3
+P 2300 2750
+F 0 "J1" H 2300 2550 50  0001 C CNN
+F 1 "Vin_cnt" H 2300 2500 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 2300 2750 50  0001 C CNN
+F 3 "~" H 2300 2750 50  0001 C CNN
+	1    2300 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2650 2650 2500 2650
+$Comp
+L power:GND1 #PWR023
+U 1 1 6149DF93
+P 2500 2750
+F 0 "#PWR023" H 2500 2500 50  0001 C CNN
+F 1 "GND1" H 2505 2577 50  0000 C CNN
+F 2 "" H 2500 2750 50  0001 C CNN
+F 3 "" H 2500 2750 50  0001 C CNN
+	1    2500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 614AA394
+P 12650 4250
+F 0 "R2" V 12850 4250 50  0000 C CNN
+F 1 "47Ω" V 12750 4250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 12580 4250 50  0001 C CNN
+F 3 "~" H 12650 4250 50  0001 C CNN
+	1    12650 4250
+	0    -1   -1   0   
+$EndComp
+Text Label 12450 4250 2    59   ~ 0
+MOS_Gate
+Wire Wire Line
+	13100 4450 13100 4550
+$Comp
+L Transistor_FET:IRF740 Q5
+U 1 1 614AA39E
+P 13000 4250
+F 0 "Q5" H 13204 4296 50  0000 L CNN
+F 1 "IRFP260" H 13204 4205 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-247-3_Vertical" H 13250 4175 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/91054/91054.pdf" H 13000 4250 50  0001 L CNN
+	1    13000 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Heatsink HS1
+U 1 1 614AA3A4
+P 13100 4750
+F 0 "HS1" H 13242 4871 50  0000 L CNN
+F 1 "Heatsink" H 13242 4780 50  0000 L CNN
+F 2 "Heatsink:Heatsink_Stonecold_HS-132_32x14mm_2xFixation1.5mm" H 13112 4750 50  0001 C CNN
+F 3 "~" H 13112 4750 50  0001 C CNN
+	1    13100 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 614AA3AA
+P 12500 4400
+F 0 "R1" H 12650 4350 50  0000 C CNN
+F 1 "10kΩ" H 12650 4450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 12430 4400 50  0001 C CNN
+F 3 "~" H 12500 4400 50  0001 C CNN
+	1    12500 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	12500 4550 13100 4550
+Wire Wire Line
+	12450 4250 12500 4250
+Connection ~ 12500 4250
+Wire Wire Line
+	11900 4550 12500 4550
+Connection ~ 12500 4550
+$Comp
+L pspice:DIODE D2
+U 1 1 614EF308
+P 4650 3550
+F 0 "D2" V 4600 3750 50  0000 C CNN
+F 1 "FR154" V 4700 3800 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4650 3550 50  0001 C CNN
+F 3 "~" H 4650 3550 50  0001 C CNN
+	1    4650 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 3550 3600 3550
+Wire Wire Line
+	3150 3350 3600 3350
+Connection ~ 3600 3350
+Wire Wire Line
+	3600 3350 4050 3350
+Connection ~ 4050 3350
+Wire Wire Line
+	4050 3350 4400 3350
+Wire Wire Line
+	4650 3750 4650 3900
+Wire Wire Line
+	4650 3900 4500 3900
+Wire Wire Line
+	4200 3900 4050 3900
+Wire Wire Line
+	4050 3900 4050 3750
+Wire Wire Line
+	3250 4100 4350 4100
+Wire Wire Line
+	4350 4100 4350 4050
+Connection ~ 3250 4100
+Wire Wire Line
+	1000 3500 1000 3150
+Wire Wire Line
+	1000 3150 1400 3150
+Connection ~ 1400 3150
+Wire Wire Line
+	4400 2750 4400 2900
+$Comp
+L power:+12V #PWR06
+U 1 1 6152341C
+P 4400 2750
+F 0 "#PWR06" H 4400 2600 50  0001 C CNN
+F 1 "+12V" H 4415 2923 50  0000 C CNN
+F 2 "" H 4400 2750 50  0001 C CNN
+F 3 "" H 4400 2750 50  0001 C CNN
+	1    4400 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3350 4400 3200
+Connection ~ 4400 3350
+Wire Wire Line
+	4400 3350 4650 3350
+Text Label 3300 3150 0    59   ~ 0
+PWM
+Wire Wire Line
+	3150 3150 3300 3150
+Wire Wire Line
+	13100 3600 11900 3600
+Wire Wire Line
+	11900 3600 11900 4250
+$Comp
+L power:+12VA #PWR07
+U 1 1 615866CF
+P 6650 3400
+F 0 "#PWR07" H 6650 3250 50  0001 C CNN
+F 1 "+12VA" H 6665 3573 50  0000 C CNN
+F 2 "" H 6650 3400 50  0001 C CNN
+F 3 "" H 6650 3400 50  0001 C CNN
+	1    6650 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 6650 3400
+$Comp
+L power:+12VA #PWR011
+U 1 1 6158E6DF
+P 11900 3600
+F 0 "#PWR011" H 11900 3450 50  0001 C CNN
+F 1 "+12VA" H 11915 3773 50  0000 C CNN
+F 2 "" H 11900 3600 50  0001 C CNN
+F 3 "" H 11900 3600 50  0001 C CNN
+	1    11900 3600
+	1    0    0    -1  
+$EndComp
+Text Notes 11850 3100 0    79   ~ 0
+2. Mosfet e carga
+Connection ~ 11900 3600
+$Comp
+L Transistor_BJT:BC556 Q2
+U 1 1 615EEF07
+P 9600 4100
+F 0 "Q2" H 9791 4054 50  0000 L CNN
+F 1 "BC556" H 9791 4145 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Wide" H 9800 4025 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 9600 4100 50  0001 L CNN
+	1    9600 4100
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC548 Q1
+U 1 1 615FC6D4
+P 9600 3700
+F 0 "Q1" H 9791 3746 50  0000 L CNN
+F 1 "BC548" H 9791 3655 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Wide" H 9800 3625 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 9600 3700 50  0001 L CNN
+	1    9600 3700
+	1    0    0    -1  
+$EndComp
+Connection ~ 9400 3700
+Connection ~ 9700 3900
+Wire Wire Line
+	9700 4550 9700 4300
+Text Notes 6850 900  0    79   ~ 0
+Módulo de acionamento PWM com proteção para MOSFETs
+Text Notes 6800 1750 0    79   ~ 0
+2. Isolação, Proteção e acionamento
+$Comp
+L power:GND2 #PWR0101
+U 1 1 61623AEE
+P 12500 4550
+F 0 "#PWR0101" H 12500 4300 50  0001 C CNN
+F 1 "GND2" H 12505 4377 50  0000 C CNN
+F 2 "" H 12500 4550 50  0001 C CNN
+F 3 "" H 12500 4550 50  0001 C CNN
+	1    12500 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 61631794
+P 13300 3600
+F 0 "J2" H 13300 3400 50  0001 C CNN
+F 1 "Carga" H 13300 3350 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 13300 3600 50  0001 C CNN
+F 3 "~" H 13300 3600 50  0001 C CNN
+	1    13300 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13100 3700 13100 4050
+$EndSCHEMATC
