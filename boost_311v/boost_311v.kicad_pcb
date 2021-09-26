@@ -5323,7 +5323,7 @@
   )
 
   (dimension 100.330322 (width 0.15) (layer Dwgs.User) (tstamp 614FB0BE)
-    (gr_text "100,330 mm" (at 117.986291 188.819004 -0.1450523) (layer Dwgs.User) (tstamp 614FB0BE)
+    (gr_text "100,330 mm" (at 117.986291 188.819004 -0.1450523) (layer Dwgs.User) (tstamp 6150FD25)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (feature1 (pts (xy 67.818 189.992) (xy 67.819485 189.405581)))
@@ -5335,7 +5335,7 @@
     (arrow2b (pts (xy 168.148 190.246) (xy 167.020015 190.829567)))
   )
   (dimension 100.330322 (width 0.15) (layer Dwgs.User) (tstamp 614FB0B8)
-    (gr_text "100,330 mm" (at 69.244996 137.861791 89.8549477) (layer Dwgs.User) (tstamp 614FB0B8)
+    (gr_text "100,330 mm" (at 69.244996 137.861791 89.8549477) (layer Dwgs.User) (tstamp 6150FD1F)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (feature1 (pts (xy 68.072 87.6935) (xy 68.658419 87.694985)))
