@@ -1074,7 +1074,7 @@ Connection ~ 10100 6350
 Wire Wire Line
 	9500 5750 9900 5750
 Text Notes 2250 9200 0    98   ~ 0
-GND1 pertence a fonte de 12V\n\nGND2 pertence a fonte de 24V\n\nGND1 e GND2 não tem conexão física\n\nO GND2 do Estagio 4. Boost, preferencialmente deve estar a uma distância do\nGND2 do estagio 3, para evitar ruídos gerados pela corrente alta do boost
+GND pertence a fonte de 12V\n\nGNDA pertence a fonte de 24V\n\nGND e GNDA não tem conexão física\n\nO GNDA do Estagio 4. Boost, preferencialmente deve estar a uma distância do\nGNDA do estagio 3, para evitar ruídos gerados pela corrente alta do boost
 Text Notes 2800 7550 0    59   ~ 0
 O estagio de amplificação\nFaz com que o sinal da saída do opto\nfique com valor de tensão de 12V\ne mais definido/quadrado possível
 Text Notes 4950 7550 0    59   ~ 0
